@@ -8,6 +8,7 @@ const config: Config = {
 
   url: 'http://docs.videmanmc.ru',
   baseUrl: '/',
+  trailingSlash: false,
 
   organizationName: 'alekseyvideman',
   projectName: 'videmanmc-docs',
