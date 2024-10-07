@@ -10,9 +10,6 @@ const config: Config = {
   baseUrl: '/',
   trailingSlash: false,
 
-  organizationName: 'alekseyvideman',
-  projectName: 'videmanmc-docs',
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -40,9 +37,20 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'mainSidebar',
+          sidebarId: 'modSidebar',
           position: 'left',
           label: 'Руководство по модам',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'oneBlockSidebar',
+          position: 'left',
+          label: 'Руководство по OneBlock',
+        },
+        {
+          to: 'https://discord.gg/kQeW23CjNa',
+          label: 'Дискорд',
+          position: 'right',
         },
       ],
     },
@@ -51,8 +59,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} VidemanMC Docs`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.jettwaveLight,
+      darkTheme: prismThemes.jettwaveDark,
     },
   } satisfies Preset.ThemeConfig,
 };
