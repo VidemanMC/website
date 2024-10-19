@@ -54,7 +54,7 @@ const config: Config = {
         },
         {
           to: 'https://t.me/+AakeNuqMt6M2NDgy', 
-          label: 'Телеграмм',
+          label: 'Телеграм',
           position: 'right'
         }, 
       ],
