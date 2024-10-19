@@ -52,6 +52,11 @@ const config: Config = {
           label: 'Дискорд',
           position: 'right',
         },
+        {
+          to: 'https://t.me/+AakeNuqMt6M2NDgy', 
+          label: 'Телеграмм',
+          position: 'right'
+        }, 
       ],
     },
     footer: {
