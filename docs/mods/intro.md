@@ -11,31 +11,31 @@ sidebar_position: 1
 1) Загрузите лаунчер [отсюда](https://drive.google.com/file/d/1t2C4nhW57Zq0Bid3G9dXafmqi0DUcguW/view?usp=sharing).
 2) Вы скачали архив.
 
-![Архив в папке загрузок](/static/img/tutorial_launcher/tutorial_launcher_1.png)
+![Архив в папке загрузок](/img/tutorial_launcher/tutorial_launcher_1.png)
 
 3) Извлеките его в любую удобную директорию.
 
-![Процесс извлечения](/static/img/tutorial_launcher/tutorial_launcher_2.png)
+![Процесс извлечения](/img/tutorial_launcher/tutorial_launcher_2.png)
 
 4) Вы получили папку с файлами клиента! Откройте её.
 
-![Папка с файлами клиента](/static/img/tutorial_launcher/tutorial_launcher_3.png)
+![Папка с файлами клиента](/img/tutorial_launcher/tutorial_launcher_3.png)
 
 5) Теперь нужно открыть рядом директорию __.minecraft__, в которой хранятся все файлы игры! Если Вы играете через TLauncher, просто нажмите на кнопку в нижней части интерфейса, и Вы перейдёте в нужную директорию.
 
-![Открываем папку .minecraft](/static/img/tutorial_launcher/tutorial_launcher_4.png)
+![Открываем папку .minecraft](/img/tutorial_launcher/tutorial_launcher_4.png)
 
 6) Перенесите всё содержимое из папки клиента в директорию __.minecraft__!
 
-![Перенос содержимого](/static/img/tutorial_launcher/tutorial_launcher_5.png)
+![Перенос содержимого](/img/tutorial_launcher/tutorial_launcher_5.png)
 
 7) В списке версий Tlaucner'а выбираете версию __Forge 1.20.1__.
 
-![Поиск нужной версии](/static/img/tutorial_launcher/tutorial_launcher_6.png)
+![Поиск нужной версии](/img/tutorial_launcher/tutorial_launcher_6.png)
 
 8) Нажмите кнопку "скачать" (если версия ещё не установлена) или кнопку "играть".
 
-![Запуск!](/static/img/tutorial_launcher/tutorial_launcher_7.png)
+![Запуск!](/img/tutorial_launcher/tutorial_launcher_7.png)
 
 
 
@@ -47,7 +47,7 @@ sidebar_position: 1
 
 Чтобы начать игру, задайте пароль своему аккаунту.
 
-![Ввод пароля!](/static/img/tutorial_launcher/tutorial_password.png)
+![Ввод пароля!](/img/tutorial_launcher/tutorial_password.png)
 
 
 
@@ -65,8 +65,8 @@ sidebar_position: 1
 ## Приятной игры!
 Поздравляем, Вы вошли в лаунчер!
 
-![Играем!!!](/static/img/tutorial_launcher/tutorial_launcher_final.png)
+![Играем!!!](/img/tutorial_launcher/tutorial_launcher_final.png)
 
 Остаётся только попасть на сервер!
 
-![Играем с друзьями!!!](/static/img/tutorial_launcher/tutorial_launcher_multiplayer_0.png)
+![Играем с друзьями!!!](/img/tutorial_launcher/tutorial_launcher_multiplayer_0.png)
