@@ -6,7 +6,7 @@ const config: Config = {
   title: 'VidemanMC',
   favicon: 'img/icon.png',
 
-  url: 'http://docs.videmanmc.ru',
+  url: 'http://videmanmc.ru',
   baseUrl: '/',
   trailingSlash: false,
 
