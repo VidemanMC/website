@@ -7,7 +7,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}>
-        <h1 style="text-align: center">
+        <h1 style={{text-align: 'center'}}>
           Лучшый отдых - это смена деятельности. Отдыхай, играя
         </h1>
 
