@@ -7,8 +7,8 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}>
-        <h1>
-          Привет! Вы на сайте сервера Videman.
+        <h1 style="text-align: center">
+          Лучшый отдых - это смена деятельности. Отдыхай, играя
         </h1>
 
         <img src="/img/joke/team.png"/>
