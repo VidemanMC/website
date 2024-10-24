@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 
+import 'react-photo-view/dist/react-photo-view.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+
+
 # Приветствие
 Приветствую вас в справочнике «Videman The Cut Occult»! Здесь даны ответы на частые вопросы новичков по установке, модам и игре в целом.
 
@@ -11,31 +15,59 @@ sidebar_position: 1
 1) Загрузите лаунчер [отсюда](https://drive.google.com/file/d/1t2C4nhW57Zq0Bid3G9dXafmqi0DUcguW/view?usp=sharing).
 2) Вы скачали архив.
 
-![Архив в папке загрузок](/img/tutorial_launcher/tutorial_launcher_1.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_1.png">
+        ![Архив в папке загрузок](/img/tutorial_launcher/tutorial_launcher_1.png)
+      </PhotoView>
+  </PhotoProvider>
 
 3) Извлеките его в любую удобную директорию.
 
-![Процесс извлечения](/img/tutorial_launcher/tutorial_launcher_2.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_2.png">
+        ![Процесс извлечения](/img/tutorial_launcher/tutorial_launcher_2.png)
+      </PhotoView>
+  </PhotoProvider>
 
 4) Вы получили папку с файлами клиента! Откройте её.
 
-![Папка с файлами клиента](/img/tutorial_launcher/tutorial_launcher_3.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_3.png">
+        ![Папка с файлами клиента](/img/tutorial_launcher/tutorial_launcher_3.png)
+      </PhotoView>
+  </PhotoProvider>
 
 5) Теперь нужно открыть рядом директорию __.minecraft__, в которой хранятся все файлы игры! Если Вы играете через TLauncher, просто нажмите на кнопку в нижней части интерфейса, и Вы перейдёте в нужную директорию.
 
-![Открываем папку .minecraft](/img/tutorial_launcher/tutorial_launcher_4.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_4.png">
+        ![Открываем папку .minecraft](/img/tutorial_launcher/tutorial_launcher_4.png)
+      </PhotoView>
+  </PhotoProvider>
 
 6) Перенесите всё содержимое из папки клиента в директорию __.minecraft__!
 
-![Перенос содержимого](/img/tutorial_launcher/tutorial_launcher_5.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_5.png">
+        ![Перенос содержимого](/img/tutorial_launcher/tutorial_launcher_5.png)
+      </PhotoView>
+  </PhotoProvider>
 
 7) В списке версий Tlaucner'а выбираете версию __Forge 1.20.1__.
 
-![Поиск нужной версии](/img/tutorial_launcher/tutorial_launcher_6.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_6.png">
+        ![Поиск нужной версии](/img/tutorial_launcher/tutorial_launcher_6.png)
+      </PhotoView>
+  </PhotoProvider>
 
 8) Нажмите кнопку "скачать" (если версия ещё не установлена) или кнопку "играть".
 
-![Запуск!](/img/tutorial_launcher/tutorial_launcher_7.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_7.png">
+        ![Запуск!](/img/tutorial_launcher/tutorial_launcher_7.png)
+      </PhotoView>
+  </PhotoProvider>
 
 
 
@@ -47,7 +79,11 @@ sidebar_position: 1
 
 Чтобы начать игру, задайте пароль своему аккаунту.
 
-![Ввод пароля!](/img/tutorial_launcher/tutorial_password.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_password.png">
+        ![Ввод пароля!](/img/tutorial_launcher/tutorial_password.png)
+      </PhotoView>
+  </PhotoProvider>
 
 
 
@@ -65,8 +101,16 @@ sidebar_position: 1
 ## Приятной игры!
 Поздравляем, Вы вошли в лаунчер!
 
-![Играем!!!](/img/tutorial_launcher/tutorial_launcher_final.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_final.png">
+        ![Играем!!!](/img/tutorial_launcher/tutorial_launcher_final.png)
+      </PhotoView>
+  </PhotoProvider>
 
 Остаётся только попасть на сервер!
 
-![Играем с друзьями!!!](/img/tutorial_launcher/tutorial_launcher_multiplayer_0.png)
+ <PhotoProvider>
+      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_multiplayer_0.png">
+        ![Играем с друзьями!!!](/img/tutorial_launcher/tutorial_launcher_multiplayer_0.png)
+      </PhotoView>
+  </PhotoProvider>
