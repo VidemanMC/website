@@ -61,7 +61,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} VidemanMC Docs`,
+      copyright: `Copyright © ${new Date().getFullYear()} VidemanMC`,
     },
     prism: {
       theme: prismThemes.jettwaveLight,
