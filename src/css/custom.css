@@ -4,6 +4,16 @@
  * work well for content-centric websites.
  */
 
+
+/* Итак, тут импортятся кастомные шрифты: */
+@font-face {
+  font-family: 'Coiny2';
+  src: url('../../static/fonts/coiny2_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #e44b6a;
@@ -17,7 +27,59 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+
+.testClass{
+  background-color: #1a8870;
+}
+
+.topper{
+  background-color: #010101;
+  display: flex;
+}
+.topIcon{
+  background-image: url('../../static/img/icon_transparet_background.png');
+  background-size:cover;
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+}
+.topText{
+  margin-top: 10px;
+}
+.mainPageTopComponent{
+  background-image: url("../../static/img/pages/mainpage/firstcomponent.png");
+  background-position: center; 
+  background-size: auto;
+  height: 1000px;
+
+}
+
+.simpleWrapper{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.mainPageTransparentOverlay{
+  background-color: #322a3d83;
+
+  width: 50%;
+  
+  height: 400px;
+
+  display: grid;
+  place-items: center;
+}
+
+.mainPageTopServerTitle{
+  font-size: 56px;
+  font-family: 'Coiny2';
+  color: white;
+  font-weight: normal;
+}
+
+
+/* Здесь можно переопределить свойства классов для тёмной темы. */
 [data-theme='dark'] {
   --ifm-color-primary: #e44b6a;
   --ifm-color-primary-dark: #21af90;
@@ -27,4 +89,13 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  .testClass{
+    background-color: rgb(77, 30, 70);
+  }
 }
+
+
+
+
+
