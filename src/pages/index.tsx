@@ -9,6 +9,7 @@ import store from '../store/store';
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
+  
   return (
     <Provider store={store}>
       <Layout

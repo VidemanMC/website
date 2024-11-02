@@ -104,7 +104,15 @@
   width: 50%;
   text-align: center;
 }
+.unclickedSlideOption{
+  background-color: #1a8870;
+  color: white;
+}
 
+.clickedSlideOption{
+  background-color: #881e1a;
+  color:white;
+}
 /* Здесь можно переопределить свойства классов для тёмной темы. */
 [data-theme='dark'] {
   --ifm-color-primary: #e44b6a;
@@ -120,8 +128,4 @@
     background-color: rgb(77, 30, 70);
   }
 }
-
-
-
-
 
