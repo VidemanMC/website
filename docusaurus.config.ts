@@ -31,8 +31,13 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
+  
   themeConfig: {
+    metadata: [
+      {name: 'title', content: 'VidemanMC.ru'},
+      {name: 'keywords', content: 'minecraft, gaming, multiplayer, survival, oneblock, modded, pvp'},
+      {name: 'description', content: 'VidemanMC.ru - это сервера для игры с друзьями во множестве увлекательных режимов!'},
+    ],
     navbar: {
       items: [
         {
@@ -68,6 +73,8 @@ const config: Config = {
       darkTheme: prismThemes.jettwaveDark,
     },
   } satisfies Preset.ThemeConfig,
+
+  
 };
 
 export default config;

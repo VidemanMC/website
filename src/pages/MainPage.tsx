@@ -1,5 +1,6 @@
 import React from 'react';
 import MainPageTopComponent from '../components/MainPageTopComponent';
+import MainPageSlider from '../components/MainPageSlider';
 export default function MainPage() {
   return <div>
     <div className='topper'>
@@ -8,6 +9,8 @@ export default function MainPage() {
     </div>
 
     <MainPageTopComponent/>
+    <MainPageSlider/>
 
+    
   </div>;
 }
