@@ -35,7 +35,7 @@ const config: Config = {
   themeConfig: {
     metadata: [
       {name: 'title', content: 'VidemanMC.ru'},
-      {name: 'keywords', content: 'minecraft, gaming, multiplayer, survival, oneblock, modded, pvp'},
+      {name: 'keywords', content: 'minecraft, gaming, multiplayer, survival, oneblock, one block, modded, pvp, гейминг, игры, мультиплеер, майнкрафт, выживание, моды, ванблок, ван блок, пвп, онлайн игры'},
       {name: 'description', content: 'VidemanMC.ru - это сервера для игры с друзьями во множестве увлекательных режимов!'},
     ],
     navbar: {
