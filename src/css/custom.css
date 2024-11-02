@@ -13,6 +13,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Podkova';
+  src: url('../../static/fonts/PODKOVA-VARIABLEFONT_WGHT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* You can override the default Infima variables here. */
 :root {
@@ -61,14 +67,15 @@
 }
 
 .mainPageTransparentOverlay{
-  background-color: #322a3d83;
-
+  background-color: #322a3d15;
+  border-radius: 20px;
   width: 50%;
-  
-  height: 400px;
+  height: 250px;
 
   display: grid;
   place-items: center;
+  
+  
 }
 
 .mainPageTopServerTitle{
@@ -76,8 +83,27 @@
   font-family: 'Coiny2';
   color: white;
   font-weight: normal;
+
+  margin-bottom: -60px;
+
 }
 
+.mainPageTopSlogan{
+  color: white;
+  font-family: 'Podkova';
+  font-size: 25px;
+
+  margin:0;
+  padding: 0;
+}
+
+.mainPageTopDescription{
+  font-family: 'Podkova';
+  color: white;
+  font-size: 20px;
+  width: 50%;
+  text-align: center;
+}
 
 /* Здесь можно переопределить свойства классов для тёмной темы. */
 [data-theme='dark'] {
