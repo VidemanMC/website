@@ -8,7 +8,7 @@
 /* Итак, тут импортятся кастомные шрифты: */
 @font-face {
   font-family: 'Coiny2';
-  src: url('/fonts/coiny2_0.ttf') format('truetype');
+  src: url('coiny2_0.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
