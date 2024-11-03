@@ -8,14 +8,14 @@
 /* Итак, тут импортятся кастомные шрифты: */
 @font-face {
   font-family: 'Coiny2';
-  src: url('../fonts/coiny2_0.ttf') format('truetype');
+  src: url('/fonts/coiny2_0.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Podkova';
-  src: url('../fonts/PODKOVA-VARIABLEFONT_WGHT.ttf') format('truetype');
+  src: url('/fonts/PODKOVA-VARIABLEFONT_WGHT.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,7 +48,7 @@
   display: flex;
 }
 .topIcon{
-  background-image: url('../img/icon_transparet_background.png');
+  background-image: url('/img/icon_transparet_background.png');
   background-size:cover;
   height: 50px;
   width: 50px;
@@ -59,7 +59,7 @@
   color: white;
 }
 .mainPageTopComponent{
-  background-image: url("../img/pages/mainpage/firstcomponent.png");
+  background-image: url("/img/pages/mainpage/firstcomponent.png");
   background-position: center; 
   background-size: auto;
   height: 1000px;
@@ -235,16 +235,16 @@
 }
 
 .oneBlock{
-  background-image: url('../img/pages/mainpage/oneblock.png');
+  background-image: url('/img/pages/mainpage/oneblock.png');
 }
 
 .mods{
-  background-image: url('../img/pages/mainpage/mods.png');
+  background-image: url('/img/pages/mainpage/mods.png');
 
 }
 
 .bosses{
-  background-image: url('../img/pages/mainpage/bosses.png');
+  background-image: url('/img/pages/mainpage/bosses.png');
 
 }
 
