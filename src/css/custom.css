@@ -8,14 +8,14 @@
 /* Итак, тут импортятся кастомные шрифты: */
 @font-face {
   font-family: 'Coiny2';
-  src: url('coiny2.ttf') format('truetype');
+  src: url('../fonts/coiny2.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {  
   font-family: 'Podkova';
-  src: url('PODKOVA.ttf') format('truetype');
+  src: url('../fonts/PODKOVA.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
