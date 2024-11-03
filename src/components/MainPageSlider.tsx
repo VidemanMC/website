@@ -14,7 +14,10 @@ export default function MainPageSlider() {
 
     return <div className='mainPageSlider'>
     <div className='sliderWrapper'>
-        <SlideLine/>
+        <div className='slideLineWrapperWrapper'>
+            <SlideLine/>
+
+        </div>
         <div className='simpleWrapper sliderViewWrapper'>
         {pickedSlideElement==0?
             <About/> : <></>

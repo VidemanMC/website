@@ -56,6 +56,7 @@
 }
 .topText{
   margin-top: 10px;
+  color: white;
 }
 .mainPageTopComponent{
   background-image: url("../../static/img/pages/mainpage/firstcomponent.png");
@@ -113,17 +114,30 @@
 
 .mainPageSlider{
   height: 100vh;
-  margin-top: -10vh;
+  /* margin-top: -10vh; */
 
 }
+.slideLineWrapperWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .slideLineWrapper{
-  height: 4vh;
+  height: 20px;
   display: flex;
   gap: 10px;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding:0;
+  position: fixed;
+  bottom: 8vh;
+  /* left: 35vw; */
+  z-index: 1000;
+  box-shadow: 10px 9px 8px rgba(51, 10, 48, 0.2);
+  background-color: #0101017d;
+  border: 2px solid #010101;
+  padding: 23px 10px;
   
 }
 .slideOptionWrapper{
@@ -142,6 +156,8 @@
 
 .unclickedSlideOption:hover{
   text-decoration: underline;
+  background-color: #156c59;
+
 }
 
 .clickedSlideOption{
@@ -153,7 +169,7 @@
 }
 
 .sliderViewWrapper{
-  height: 96vh;
+  height: 100vh;
 
 }
 
@@ -194,6 +210,7 @@
 }
 .slideViewInstructionsTitle{
   font-family: 'Podkova';
+  color: white;
   font-size: 30px;
   font-weight: bold;
   
@@ -203,6 +220,7 @@
 }
 .slideViewInstructionsItem{
   font-family: 'Podkova';
+  color: white;
   font-size: 20px;
   cursor: pointer;
 

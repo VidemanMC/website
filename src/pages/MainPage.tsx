@@ -3,6 +3,7 @@ import MainPageTopComponent from '../components/MainPageTopComponent';
 import MainPageSlider from '../components/MainPageSlider';
 import { Provider } from 'react-redux';
 import store from '../store/store';
+import SlideLine from '../components/SlideLine';
 
 export default function MainPage() {
   
@@ -16,6 +17,8 @@ export default function MainPage() {
 
       <MainPageTopComponent/>
       <MainPageSlider/>
+      {/* <SlideLine/> */}
+
     </div>
     </Provider>
 
