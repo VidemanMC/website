@@ -138,9 +138,10 @@
   /* left: 35vw; */
   z-index: 1000;
   box-shadow: 10px 9px 8px rgba(51, 10, 48, 0.2);
-  background-color: #0101017d;
+  background-color: #ffffff33;
   border: 2px solid #010101;
   padding: 23px 10px;
+  border-radius: 4px;
   
 }
 .slideOptionWrapper{
@@ -149,6 +150,7 @@
 
 .slideOption{
   padding: 4px;
+  border-radius: 3px;
   
 }
 
@@ -197,7 +199,7 @@
 }
 
 .slideViewInstructions{
-  background-color: #1d09219e;
+  background-color: #251e27a4;
   width: 400px;
   height: auto;
   position: absolute;
@@ -269,6 +271,16 @@
 
   .testClass{
     background-color: rgb(77, 30, 70);
+  }
+
+  .slideLineWrapper{
+    background-color: #0101017d;
+    border: 2px solid #010101;
+  }
+  .slideViewInstructions{
+    background-color: #1d09219e;
+    border: 2px solid #010101;
+  
   }
 }
 
