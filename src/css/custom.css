@@ -8,14 +8,14 @@
 /* Итак, тут импортятся кастомные шрифты: */
 @font-face {
   font-family: 'Coiny2';
-  src: url('../../static/fonts/coiny2_0.ttf') format('truetype');
+  src: url('../fonts/coiny2.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
+@font-face {  
   font-family: 'Podkova';
-  src: url('../../static/fonts/PODKOVA-VARIABLEFONT_WGHT.ttf') format('truetype');
+  src: url('../fonts/PODKOVA.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -38,12 +38,17 @@
   background-color: #1a8870;
 }
 
+.allInOne{
+  user-select: none;
+
+}
+
 .topper{
   background-color: #010101;
   display: flex;
 }
 .topIcon{
-  background-image: url('../../static/img/icon_transparet_background.png');
+  background-image: url('/img/icon_transparet_background.png');
   background-size:cover;
   height: 50px;
   width: 50px;
@@ -51,9 +56,10 @@
 }
 .topText{
   margin-top: 10px;
+  color: white;
 }
 .mainPageTopComponent{
-  background-image: url("../../static/img/pages/mainpage/firstcomponent.png");
+  background-image: url("/img/pages/mainpage/firstcomponent.png");
   background-position: center; 
   background-size: auto;
   height: 1000px;
@@ -105,6 +111,147 @@
   text-align: center;
 }
 
+
+.mainPageSlider{
+  height: 100vh;
+  /* margin-top: -10vh; */
+
+}
+.slideLineWrapperWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slideLineWrapper{
+  height: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding:0;
+  position: fixed;
+  bottom: 8vh;
+  /* left: 35vw; */
+  z-index: 1000;
+  box-shadow: 10px 9px 8px rgba(51, 10, 48, 0.2);
+  background-color: #0101017d;
+  border: 2px solid #010101;
+  padding: 23px 10px;
+  
+}
+.slideOptionWrapper{
+  cursor: pointer;
+}
+
+.slideOption{
+  padding: 4px;
+  
+}
+
+.unclickedSlideOption{
+  background-color: #1a8870;
+  color: white;
+}
+
+.unclickedSlideOption:hover{
+  text-decoration: underline;
+  background-color: #156c59;
+
+}
+
+.clickedSlideOption{
+  background-color: #881e1a;
+  color:white;
+}
+.clickedSlideOption:hover{
+
+}
+
+.sliderViewWrapper{
+  height: 100vh;
+
+}
+
+.slideView{
+  width: 100%;
+  height: 100%;
+  background-size:cover;
+  /* background-position: center; 
+  background-size: auto; */
+  position: relative;
+
+}
+
+.slideViewTitle{
+  font-size: 56px;
+  font-family: 'Coiny2';
+  color: white;
+  font-weight: normal;
+  background-color: #1d092118;
+  text-align: center;
+}
+
+.slideViewInstructions{
+  background-color: #1d09219e;
+  width: 400px;
+  height: auto;
+  position: absolute;
+  left: 20vw;
+  bottom: 20vh;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+
+  border: 2px solid;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+.slideViewInstructionsTitle{
+  font-family: 'Podkova';
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+.slideViewInstructionsItemWrapper{
+  margin-left: -20px;
+}
+.slideViewInstructionsItem{
+  font-family: 'Podkova';
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+.slideViewInstructionsItem:hover{
+  text-decoration: underline;
+}
+
+
+.about{
+  background-color: #e44b6a;
+}
+
+.oneBlock{
+  background-image: url('/img/pages/mainpage/oneblock.png');
+}
+
+.mods{
+  background-image: url('/img/pages/mainpage/mods.png');
+
+}
+
+.bosses{
+  background-image: url('/img/pages/mainpage/bosses.png');
+
+}
+
+.team{
+  background-color: cadetblue;
+}
+
 /* Здесь можно переопределить свойства классов для тёмной темы. */
 [data-theme='dark'] {
   --ifm-color-primary: #e44b6a;
@@ -120,8 +267,4 @@
     background-color: rgb(77, 30, 70);
   }
 }
-
-
-
-
 
