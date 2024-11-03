@@ -5,7 +5,7 @@ interface dataState {
 }
 
 const initialState: dataState = {
-    pickedSlideElement: 0,
+    pickedSlideElement: 1,
 };
 
 
