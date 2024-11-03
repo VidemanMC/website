@@ -292,7 +292,7 @@
     
   }
   .mainPageTopComponent{
-    height: 120vh;
+    height: 100vh;
   }
   .simpleWrapper{
   }
@@ -304,7 +304,7 @@
   }
   .mainPageTopSlogan{
     font-size: 1.4em;
-    margin-top: -3em;
+    /* margin-top: -3em; */
     
 
   }
