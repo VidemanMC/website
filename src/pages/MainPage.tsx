@@ -1,15 +1,27 @@
 import React from 'react';
 import MainPageTopComponent from '../components/MainPageTopComponent';
 import MainPageSlider from '../components/MainPageSlider';
-export default function MainPage() {
-  return <div>
-    <div className='topper'>
-        <div className='topIcon'></div>
-        <div className='topText'>Главная страница.</div>
-    </div>
+import { Provider } from 'react-redux';
+import store from '../store/store';
+import SlideLine from '../components/SlideLine';
 
-    <MainPageTopComponent/>
-    <MainPageSlider/>
+export default function MainPage() {
+  
+  return <div>
+    <Provider store={store}>
+    <div className='allInOne'>
+      <div className='topper'>
+          <div className='topIcon'></div>
+          <div className='topText'>Главная страница.</div>
+      </div>
+
+      <MainPageTopComponent/>
+      <MainPageSlider/>
+      {/* <SlideLine/> */}
+
+    </div>
+    </Provider>
+
 
     
   </div>;

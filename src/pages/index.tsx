@@ -9,15 +9,16 @@ import store from '../store/store';
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
+  
   return (
     <Provider store={store}>
-
-    <Layout
-      title={`${siteConfig.title}`}>
-      <h1 style={{textAlign: 'center'}}>
-        Лучший отдых - это смена деятельности. Отдыхай, играя!
-      </h1>
-    </Layout>
+      <Layout
+        title={`${siteConfig.title}`}>
+        <h1 style={{textAlign: 'center'}}>
+          Лучший отдых - это смена деятельности. Отдыхай, играя!
+        </h1>
+        <img src="/img/joke/team.png"/>
+      </Layout>
     </Provider>
     
     

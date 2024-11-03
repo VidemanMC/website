@@ -10,9 +10,9 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 Приветствую вас в справочнике «Videman The Cut Occult»! Здесь даны ответы на частые вопросы новичков по установке, модам и игре в целом.
 
 ## Во-первых
-Вход на сервер доступен строго через лаунчер. Вот как его установить!
+Вход на сервер доступен строго через мод-пак(лаунчер пока в разработке, так что установка мод-пак). Вот как его установить!
 
-1) Загрузите лаунчер [отсюда](https://drive.google.com/file/d/1t2C4nhW57Zq0Bid3G9dXafmqi0DUcguW/view?usp=sharing).
+1) Загрузите мод-пак [отсюда](https://drive.google.com/file/d/1t2C4nhW57Zq0Bid3G9dXafmqi0DUcguW/view?usp=drive_link).
 2) Вы скачали архив.
 
  <PhotoProvider>
