@@ -9,14 +9,11 @@ export default function SlideLine() {
     const pickedSlideElement = useSelector((state: RootState) => state.pickedSlideElement.pickedSlideElement); 
     const things = ["О нас", "Ванблок", "Моды", "Боссы", "Команда"]
 
-    return <div className='mainPageSlider'>
-    <div >
+    return <div className='slideLineWrapper'>
         {
             things.map((thing, index) =>(
                 <div><SlideOption id={index} name={thing} /></div>
             ))
         }
-        Кликнутый элемент: {pickedSlideElement}
-    </div>
     </div>;
 }

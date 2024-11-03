@@ -38,6 +38,11 @@
   background-color: #1a8870;
 }
 
+.allInOne{
+  user-select: none;
+
+}
+
 .topper{
   background-color: #010101;
   display: flex;
@@ -104,15 +109,131 @@
   width: 50%;
   text-align: center;
 }
+
+
+.mainPageSlider{
+  height: 100vh;
+  margin-top: -10vh;
+
+}
+.slideLineWrapper{
+  height: 4vh;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding:0;
+  
+}
+.slideOptionWrapper{
+  cursor: pointer;
+}
+
+.slideOption{
+  padding: 4px;
+  
+}
+
 .unclickedSlideOption{
   background-color: #1a8870;
   color: white;
+}
+
+.unclickedSlideOption:hover{
+  text-decoration: underline;
 }
 
 .clickedSlideOption{
   background-color: #881e1a;
   color:white;
 }
+.clickedSlideOption:hover{
+
+}
+
+.sliderViewWrapper{
+  height: 96vh;
+
+}
+
+.slideView{
+  width: 100%;
+  height: 100%;
+  background-size:cover;
+  /* background-position: center; 
+  background-size: auto; */
+  position: relative;
+
+}
+
+.slideViewTitle{
+  font-size: 56px;
+  font-family: 'Coiny2';
+  color: white;
+  font-weight: normal;
+  background-color: #1d092118;
+  text-align: center;
+}
+
+.slideViewInstructions{
+  background-color: #1d09219e;
+  width: 400px;
+  height: auto;
+  position: absolute;
+  left: 20vw;
+  bottom: 20vh;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+
+  border: 2px solid;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+.slideViewInstructionsTitle{
+  font-family: 'Podkova';
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+.slideViewInstructionsItemWrapper{
+  margin-left: -20px;
+}
+.slideViewInstructionsItem{
+  font-family: 'Podkova';
+  font-size: 20px;
+  cursor: pointer;
+
+}
+.slideViewInstructionsItem:hover{
+  text-decoration: underline;
+}
+
+
+.about{
+  background-color: #e44b6a;
+}
+
+.oneBlock{
+  background-image: url('../../static/img/pages/mainpage/oneblock.png');
+}
+
+.mods{
+  background-image: url('../../static/img/pages/mainpage/mods.png');
+
+}
+
+.bosses{
+  background-image: url('../../static/img/pages/mainpage/bosses.png');
+
+}
+
+.team{
+  background-color: cadetblue;
+}
+
 /* Здесь можно переопределить свойства классов для тёмной темы. */
 [data-theme='dark'] {
   --ifm-color-primary: #e44b6a;

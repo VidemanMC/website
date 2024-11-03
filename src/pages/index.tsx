@@ -17,6 +17,7 @@ export default function Home(): JSX.Element {
         <h1 style={{textAlign: 'center'}}>
           Лучший отдых - это смена деятельности. Отдыхай, играя!
         </h1>
+        <img src="/img/joke/team.png"/>
       </Layout>
     </Provider>
     

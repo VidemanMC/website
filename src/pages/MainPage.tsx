@@ -8,16 +8,18 @@ export default function MainPage() {
   
   return <div>
     <Provider store={store}>
+    <div className='allInOne'>
+      <div className='topper'>
+          <div className='topIcon'></div>
+          <div className='topText'>Главная страница.</div>
+      </div>
 
-    <div className='topper'>
-        <div className='topIcon'></div>
-        <div className='topText'>Главная страница.</div>
+      <MainPageTopComponent/>
+      <MainPageSlider/>
     </div>
-
-    <MainPageTopComponent/>
-    <MainPageSlider/>
-
     </Provider>
+
+
     
   </div>;
 }

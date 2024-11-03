@@ -12,19 +12,19 @@ export default function SlideOption({id, name}) {
 
         dispatch(setPickedSlideElement(id));
       }
-    return <div>
-        {/* костыль иваныч */}
+    return <div className='slideOptionWrapper'>
         {pickedSlideElement==id ?
-        <div className='clickedSlideOption' onClick={handleClick}>
+        <div className='slideOption clickedSlideOption' onClick={handleClick}>
         {id} - {name}
         </div>
         :
-        <div className='unclickedSlideOption' onClick={handleClick}>
+        <div className='slideOption unclickedSlideOption' onClick={handleClick}>
         {id} - {name}
 
         </div>
         }
-
+        
+        
         
 
     </div>;
