@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import SlideLine from './SlideLine';
 import { RootState } from '../store/store';
@@ -11,14 +11,21 @@ import Team from './Team';
 export default function MainPageSlider() {
     const dispatch = useDispatch();
     const pickedSlideElement = useSelector((state: RootState) => state.pickedSlideElement.pickedSlideElement); 
+    const targetRef = useRef(null);
+    const scrollToElement = () => {
+      targetRef.current?.scrollIntoView({
+        behavior: 'smooth', // для плавной прокрутки
+        block: 'start', // стартовая позиция: начало элемента
+      });
+    };
 
     return <div className='mainPageSlider'>
     <div className='sliderWrapper'>
-        <div className='slideLineWrapperWrapper'>
+        <div className='slideLineWrapperWrapper' onClick={scrollToElement}>
             <SlideLine/>
 
         </div>
-        <div className='simpleWrapper sliderViewWrapper'>
+        <div className='simpleWrapper sliderViewWrapper' ref={targetRef}>
         {pickedSlideElement==0?
             <About/> : <></>
         }

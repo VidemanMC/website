@@ -60,8 +60,7 @@
 }
 .mainPageTopComponent{
   background-image: url("/img/pages/mainpage/firstcomponent.png");
-  background-position: center; 
-  background-size: auto;
+  background-size:cover;
   height: 1000px;
 
 }
@@ -77,38 +76,42 @@
   border-radius: 20px;
   width: 50%;
   height: 250px;
-
   display: grid;
   place-items: center;
-  
-  
 }
 
 .mainPageTopServerTitle{
-  font-size: 56px;
+  /* font-size: 56px; */
+  font-size: 4em;
   font-family: 'Coiny2';
   color: white;
   font-weight: normal;
-
-  margin-bottom: -60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* margin-bottom: -60px; */
+  display: flex;
 
 }
 
 .mainPageTopSlogan{
   color: white;
   font-family: 'Podkova';
-  font-size: 25px;
-
-  margin:0;
-  padding: 0;
+  /* font-size: 25px; */
+  font-size: 1.5em;
+  margin-top: -10vh;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  /* margin:0; */
+  /* padding: 0; */
 }
 
 .mainPageTopDescription{
   font-family: 'Podkova';
   color: white;
-  font-size: 20px;
+  /* font-size: 20px; */
   width: 50%;
   text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -265,6 +268,47 @@
 
   .testClass{
     background-color: rgb(77, 30, 70);
+  }
+}
+
+@media (max-width: 940px) {
+  .mainPageTopServerTitle{
+    font-size: 3em;
+  }
+  .mainPageTopSlogan{
+    margin-top: -1.4em;
+
+  }
+
+}
+/* Стили для экранов шире 768px (планшеты и десктопы) */
+@media (max-width: 768px) {
+  body {
+    
+  }
+  .mainPageTopComponent{
+    height: 120vh;
+  }
+  .simpleWrapper{
+  }
+  .mainPageTransparentOverlay{
+    
+  }
+  .mainPageTopServerTitle{
+    font-size: 2em;
+  }
+  .mainPageTopSlogan{
+    font-size: 1.4em;
+    margin-top: -3em;
+    
+
+  }
+  .mainPageTopDescription{
+    font-size: 2vh;
+    width: 40vw;
+    /* margin-top: -6em; */
+    text-align: justify;
+    
   }
 }
 

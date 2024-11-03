@@ -17,7 +17,6 @@ export default function MainPage() {
 
       <MainPageTopComponent/>
       <MainPageSlider/>
-      {/* <SlideLine/> */}
 
     </div>
     </Provider>
