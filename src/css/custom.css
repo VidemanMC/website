@@ -180,7 +180,8 @@
   width: 100%;
   height: 100%;
   background-size:cover;
-  /* background-position: center; 
+  background-position: center; 
+  /* 
   background-size: auto; */
   position: relative;
 
@@ -279,6 +280,10 @@
     margin-top: -1.4em;
 
   }
+  .slideViewInstructions{
+    width: 15em;
+    /* left: 20em; */
+  }
 
 }
 /* Стили для экранов шире 768px (планшеты и десктопы) */
@@ -309,6 +314,30 @@
     /* margin-top: -6em; */
     text-align: justify;
     
+  }
+  .mainPageSlider{
+    height: 100vh;
+  }
+  .slideView{
+
+  }
+  .slideViewTitle{
+    /* font-size: 2em;
+    padding-top: 2em; */
+  }
+  .slideViewInstructions{
+    width: 15em;
+  /* left: 20vw; */
+
+  }
+  .slideViewInstructionsTitle{
+
+  }
+  .slideViewInstructionsItemWrapper{
+
+  }
+  .slideViewInstructionsItem{
+
   }
 }
 

@@ -7,12 +7,12 @@ import SlideOption from './SlideOption';
 export default function SlideLine() {
     const dispatch = useDispatch();
     const pickedSlideElement = useSelector((state: RootState) => state.pickedSlideElement.pickedSlideElement); 
-    const things = ["О нас", "Ванблок", "Моды", "Боссы", "Команда"]
+    const things = ["Ванблок", "Моды", "Боссы", "Команда"]
 
     return <div className='slideLineWrapper'>
         {
             things.map((thing, index) =>(
-                <div><SlideOption id={index} name={thing} /></div>
+                <div><SlideOption id={index+1} name={thing} /></div>
             ))
         }
     </div>;

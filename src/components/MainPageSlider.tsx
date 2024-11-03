@@ -26,9 +26,9 @@ export default function MainPageSlider() {
 
         </div>
         <div className='simpleWrapper sliderViewWrapper' ref={targetRef}>
-        {pickedSlideElement==0?
+        {/* {pickedSlideElement==0?
             <About/> : <></>
-        }
+        } */}
         {pickedSlideElement==1?
             <OneBlock/> : <></>
         }
