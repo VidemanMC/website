@@ -41,6 +41,12 @@ const config: Config = {
     navbar: {
       items: [
         {
+          to: '/',
+          label: 'Главная',
+          activeBaseRegex: 'docs/(next|v8)',
+          // target: '_blank',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'modSidebar',
           position: 'left',
@@ -64,6 +70,11 @@ const config: Config = {
         }, 
       ],
       hideOnScroll:true,
+      logo: {
+        alt: 'VidemanLogo',
+        src: 'img/icon_transparet_background.png',
+        target: '_self',
+      },
     },
     footer: {
       style: 'dark',
