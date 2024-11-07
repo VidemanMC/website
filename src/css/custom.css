@@ -440,19 +440,23 @@
   padding: 20px 20px 40px 0;
   /* margin-left: -10em; */
   width: 20em;
+  margin-top: -6em;
+  
 }
   .mainPageTopServerTitle{
     font-size: 2em;
+    margin-bottom: 1em;
   }
   .mainPageTopSlogan{
     font-size: 1.4em;
     /* margin-top: -3em; */
+    font-weight: bold;
     
 
   }
   .mainPageTopDescription{
     font-size: 2vh;
-    width: 40vw;
+    width: 50vw;
     /* margin-top: -6em; */
     text-align: justify;
     
