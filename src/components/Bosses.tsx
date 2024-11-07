@@ -7,7 +7,7 @@ export default function Bosses() {
     const dispatch = useDispatch();
     const pickedSlideElement = useSelector((state: RootState) => state.pickedSlideElement.pickedSlideElement); 
     return <div className='slideView bosses'>
-        <div className='slideViewTitle'>
+        <div className='slideViewTitle animatedDiv'>
             Боссы
         </div>
         <div className='slideViewInstructions'>

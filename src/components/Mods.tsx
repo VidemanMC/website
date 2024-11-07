@@ -7,7 +7,7 @@ export default function Mods() {
     const dispatch = useDispatch();
     const pickedSlideElement = useSelector((state: RootState) => state.pickedSlideElement.pickedSlideElement); 
     return <div className='slideView mods'>
-        <div className='slideViewTitle'>
+        <div className='slideViewTitle animatedDiv'>
         Выживание с модами
         </div>
         <div className='slideViewInstructions'>

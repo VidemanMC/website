@@ -7,7 +7,7 @@ export default function OneBlock() {
     const dispatch = useDispatch();
     const pickedSlideElement = useSelector((state: RootState) => state.pickedSlideElement.pickedSlideElement); 
     return <div className='slideView oneBlock'>
-        <div className='slideViewTitle'>
+        <div className='slideViewTitle animatedDiv'>
             Oneblock
         </div>
         <div className='slideViewInstructions'>

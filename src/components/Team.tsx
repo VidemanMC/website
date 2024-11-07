@@ -39,7 +39,7 @@ export default function Team() {
 
 
     return <div className='slideView team'>
-        <div className='slideViewTitle'>
+        <div className='slideViewTitle animatedDiv'>
             Команда
         </div>
         <div className='teammates'>

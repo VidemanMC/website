@@ -34,9 +34,14 @@
 }
 
 
+
 .testClass{
-  background-color: #1a8870;
+  /* background-color: #1a8870; */
+  height: 100vh;
+  width: 100vw;
 }
+
+
 
 .allInOne{
   user-select: none;
@@ -114,6 +119,26 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+@keyframes resizeAndColor {
+  0% {
+    /* width: 100px; */
+    background-color: lightcoral;
+  }
+  50% {
+    /* width: 200px; */
+    background-color: lightgreen;
+  }
+  100% {
+    /* width: 100px; */
+    background-color: lightcoral;
+  }
+}
+
+.animatedDiv {
+  height: 100px;
+  animation: resizeAndColor 3s ease-in-out infinite;
+  /* animation: slideIn 2s forwards; */
+}
 
 .mainPageSlider{
   height: 100vh;
@@ -179,13 +204,16 @@
 }
 
 .slideView{
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   background-size:cover;
   background-position: center; 
   /* 
   background-size: auto; */
   position: relative;
+
+  height: 100vh;
+  width: 100vw;
 
 }
 
@@ -304,6 +332,10 @@
 
 }
 
+.mySliderWrapper{
+  background-color: #010101;
+}
+
 /* Здесь можно переопределить свойства классов для тёмной темы. */
 [data-theme='dark'] {
   --ifm-color-primary: #e44b6a;
@@ -330,6 +362,12 @@
   }
 }
 
+
+
+
+  
+  
+
 @media (max-width: 940px) {
   .mainPageTopServerTitle{
     font-size: 3em;
@@ -347,7 +385,6 @@
 /* Стили для экранов шире 768px (планшеты и десктопы) */
 @media (max-width: 768px) {
   body {
-    
   }
   .mainPageTopComponent{
     height: 100vh;
@@ -377,7 +414,9 @@
     height: 100vh;
   }
   .slideView{
-
+    height: 120vh;
+    width: 100vw;
+  
   }
   .slideViewTitle{
     /* font-size: 2em;
@@ -396,6 +435,12 @@
   }
   .slideViewInstructionsItem{
 
+  }
+  .mySliderWrapper{
+    /* height: 1000px; */
+    /* height: 20vh; */
+    padding: 0;
+    margin: 0;
   }
 }
 
