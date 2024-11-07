@@ -144,6 +144,33 @@
   /* animation: slideIn 2s forwards; */
 }
 
+.animatedBackground{
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  margin-left: -20px;
+  
+}
+
+.animatedBackground::before {
+  content: "";
+  position: absolute;
+  z-index:-10;
+  top: 0;
+  left: 0;
+  width: 104%;
+  height: 104%;
+  /* background-image: url('/img/pages/mainpage/bosses.png');  */
+  background-image: inherit; 
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  /* transform: translate(var(--x), var(--y)); */
+  transform: translate(calc(var(--x) / 2), calc(var(--y) / 2));
+  transition: transform 0.1s ease;
+  
+}
+
 .mainPageSlider{
   height: 100vh;
   /* margin-top: -10vh; */
@@ -228,6 +255,8 @@
   font-weight: normal;
   background-color: #1d092118;
   text-align: center;
+  z-index: 1000;
+
 }
 
 .slideViewInstructions{
@@ -283,6 +312,14 @@
 
 .bosses{
   background-image: url('/img/pages/mainpage/bosses.png');
+
+
+  /* background-size:cover;
+  background-position: center;  */
+  /* height: 100vh;
+  width: 100vw;
+   */
+  
 
 }
 
