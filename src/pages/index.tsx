@@ -8,7 +8,6 @@ import store from '../store/store';
 import MainPageSlider from '../components/MainPageSlider';
 import MainPageTopComponent from '../components/MainPageTopComponent';
 
-
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   
@@ -17,6 +16,10 @@ export default function Home(): JSX.Element {
       <Layout
         title={`${siteConfig.title}`}>
       <div className='allInOne'>
+      
+
+      <audio src="/music/lillibulleroflute-77207.mp3" autoPlay />
+      
         <MainPageTopComponent/>
         <MainPageSlider/>
       </div>

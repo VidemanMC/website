@@ -29,6 +29,7 @@ export default function MainPageSlider() {
 
 
     return <div className='mySliderWrapper'>
+        
         <AwesomeSlider animation="cubeAnimation"
             fillParent={false}
             style={{

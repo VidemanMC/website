@@ -64,7 +64,8 @@
   color: white;
 }
 .mainPageTopComponent{
-  background-image: url("/img/pages/mainpage/firstcomponent.png");
+  /* background-image: url("/img/pages/mainpage/firstcomponent.png"); */
+  background-image: url("/img/pages/mainpage/gif-background1.gif");
   background-size:cover;
   height: 1000px;
 
@@ -160,12 +161,10 @@
   left: 0;
   width: 104%;
   height: 104%;
-  /* background-image: url('/img/pages/mainpage/bosses.png');  */
   background-image: inherit; 
   background-size: cover;
   background-position: center;
   transform-origin: center;
-  /* transform: translate(var(--x), var(--y)); */
   transform: translate(calc(var(--x) / 2), calc(var(--y) / 2));
   transition: transform 0.1s ease;
   
@@ -425,6 +424,9 @@
 }
 /* Стили для экранов шире 768px (планшеты и десктопы) */
 @media (max-width: 768px) {
+  .mainPageTopComponent{
+    background-position: center;
+  }
   body {
   }
   .mainPageTopComponent{
@@ -434,7 +436,11 @@
   }
   .mainPageTransparentOverlay{
     
-  }
+  background-color: #322a3d74;
+  padding: 20px 20px 40px 0;
+  /* margin-left: -10em; */
+  width: 20em;
+}
   .mainPageTopServerTitle{
     font-size: 2em;
   }
