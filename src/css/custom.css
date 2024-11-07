@@ -122,15 +122,19 @@
 @keyframes resizeAndColor {
   0% {
     /* width: 100px; */
+    background-color: lightblue;
+  }
+  30% {
+    /* width: 100px; */
     background-color: lightcoral;
   }
-  50% {
+  60% {
     /* width: 200px; */
     background-color: lightgreen;
   }
   100% {
     /* width: 100px; */
-    background-color: lightcoral;
+    background-color: lightblue;
   }
 }
 
