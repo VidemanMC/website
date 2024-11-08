@@ -30,7 +30,7 @@ export default function MainPageSlider() {
 
     return <div className='mySliderWrapper'>
         
-        <AwesomeSlider animation="cubeAnimation"
+        <AwesomeSlider animation="foldOutAnimation"
             fillParent={false}
             style={{
                 // "--slider-height-percentage": "48%",
