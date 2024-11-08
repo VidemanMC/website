@@ -15,11 +15,11 @@ export default function SlideOption({id, name}) {
     return <div className='slideOptionWrapper'>
         {pickedSlideElement==id ?
         <div className='slideOption clickedSlideOption' onClick={handleClick}>
-        {id} - {name}
+        {name}
         </div>
         :
         <div className='slideOption unclickedSlideOption' onClick={handleClick}>
-        {id} - {name}
+        {name}
 
         </div>
         }

@@ -34,9 +34,14 @@
 }
 
 
+
 .testClass{
-  background-color: #1a8870;
+  /* background-color: #1a8870; */
+  height: 100vh;
+  width: 100vw;
 }
+
+
 
 .allInOne{
   user-select: none;
@@ -59,9 +64,9 @@
   color: white;
 }
 .mainPageTopComponent{
-  background-image: url("/img/pages/mainpage/firstcomponent.png");
-  background-position: center; 
-  background-size: auto;
+  /* background-image: url("/img/pages/mainpage/firstcomponent.png"); */
+  background-image: url("/img/pages/mainpage/gif-background1-slow.gif");
+  background-size:cover;
   height: 1000px;
 
 }
@@ -77,40 +82,101 @@
   border-radius: 20px;
   width: 50%;
   height: 250px;
-
   display: grid;
   place-items: center;
-  
-  
 }
 
 .mainPageTopServerTitle{
-  font-size: 56px;
+  /* font-size: 56px; */
+  font-size: 4em;
   font-family: 'Coiny2';
   color: white;
   font-weight: normal;
-
-  margin-bottom: -60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* margin-bottom: -60px; */
+  display: flex;
 
 }
 
 .mainPageTopSlogan{
   color: white;
   font-family: 'Podkova';
-  font-size: 25px;
-
-  margin:0;
-  padding: 0;
+  /* font-size: 25px; */
+  font-size: 1.5em;
+  margin-top: -10vh;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  /* margin:0; */
+  /* padding: 0; */
 }
 
 .mainPageTopDescription{
   font-family: 'Podkova';
   color: white;
-  font-size: 20px;
+  /* font-size: 20px; */
   width: 50%;
   text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+@keyframes resizeAndColor {
+  0% {
+    background-color: lightblue;
+  }
+  30% {
+    background-color: lightcoral;
+  }
+  60% {
+    background-color: lightgreen;
+  }
+  100% {
+    background-color: lightblue;
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    /* background-color: #1d092100; */
+    opacity: 0;
+  }
+  100% {
+    /* background-color: #1d092118; */
+    opacity: 1;
+  }
+}
+
+.animatedDiv {
+  height: 100px;
+  animation: fadeIn 2s ease-in-out;
+  /* animation: slideIn 2s forwards; */
+}
+
+.animatedBackground{
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  margin-left: -20px;
+  
+}
+
+.animatedBackground::before {
+  content: "";
+  position: absolute;
+  z-index:-10;
+  top: 0;
+  left: 0;
+  width: 104%;
+  height: 104%;
+  background-image: inherit; 
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  transform: translate(calc(var(--x) / 2), calc(var(--y) / 2));
+  transition: transform 0.1s ease;
+  
+}
 
 .mainPageSlider{
   height: 100vh;
@@ -135,9 +201,10 @@
   /* left: 35vw; */
   z-index: 1000;
   box-shadow: 10px 9px 8px rgba(51, 10, 48, 0.2);
-  background-color: #0101017d;
+  background-color: #ffffff33;
   border: 2px solid #010101;
   padding: 23px 10px;
+  border-radius: 4px;
   
 }
 .slideOptionWrapper{
@@ -146,6 +213,7 @@
 
 .slideOption{
   padding: 4px;
+  border-radius: 3px;
   
 }
 
@@ -174,12 +242,16 @@
 }
 
 .slideView{
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   background-size:cover;
-  /* background-position: center; 
+  background-position: center; 
+  /* 
   background-size: auto; */
   position: relative;
+
+  height: 100vh;
+  width: 100vw;
 
 }
 
@@ -190,10 +262,12 @@
   font-weight: normal;
   background-color: #1d092118;
   text-align: center;
+  z-index: 1000;
+
 }
 
 .slideViewInstructions{
-  background-color: #1d09219e;
+  background-color: #251e27a4;
   width: 400px;
   height: auto;
   position: absolute;
@@ -246,10 +320,68 @@
 .bosses{
   background-image: url('/img/pages/mainpage/bosses.png');
 
+
+  /* background-size:cover;
+  background-position: center;  */
+  /* height: 100vh;
+  width: 100vw;
+   */
+  
+
 }
 
 .team{
-  background-color: cadetblue;
+  background-color: rgb(133, 183, 184);
+}
+
+.teammates{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.teammateCard{
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 16px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.teammateCard:hover{
+  transform: scale(1.05);
+}
+.teammateImg{
+
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.teammateInfo{
+  padding: 16px;
+}
+.teammateName{
+
+  font-size: 1.2em;
+  margin: 8px 0;
+}
+.teammateJob{
+  font-size: 0.9em;
+  color: #555;
+
+}
+.teammateWords{
+  font-size: 0.9em;
+  color: #555;
+
+}
+
+.mySliderWrapper{
+  background-color: #010101;
 }
 
 /* Здесь можно переопределить свойства классов для тёмной темы. */
@@ -265,6 +397,109 @@
 
   .testClass{
     background-color: rgb(77, 30, 70);
+  }
+
+  .slideLineWrapper{
+    background-color: #0101017d;
+    border: 2px solid #010101;
+  }
+  .slideViewInstructions{
+    background-color: #1d09219e;
+    border: 2px solid #010101;
+  
+  }
+}
+
+
+
+
+  
+  
+
+@media (max-width: 940px) {
+  .mainPageTopServerTitle{
+    font-size: 3em;
+  }
+  .mainPageTopSlogan{
+    margin-top: -1.4em;
+
+  }
+  .slideViewInstructions{
+    width: 15em;
+    /* left: 20em; */
+  }
+
+}
+/* Стили для экранов шире 768px (планшеты и десктопы) */
+@media (max-width: 768px) {
+  .mainPageTopComponent{
+    background-position: center;
+  }
+  body {
+  }
+  .mainPageTopComponent{
+    height: 100vh;
+  }
+  .simpleWrapper{
+  }
+  .mainPageTransparentOverlay{
+    
+  background-color: #322a3d74;
+  padding: 20px 20px 40px 0;
+  /* margin-left: -10em; */
+  width: 20em;
+  margin-top: -6em;
+  
+}
+  .mainPageTopServerTitle{
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  .mainPageTopSlogan{
+    font-size: 1.4em;
+    /* margin-top: -3em; */
+    font-weight: bold;
+    
+
+  }
+  .mainPageTopDescription{
+    font-size: 2vh;
+    width: 50vw;
+    /* margin-top: -6em; */
+    text-align: justify;
+    
+  }
+  .mainPageSlider{
+    height: 100vh;
+  }
+  .slideView{
+    height: 120vh;
+    width: 100vw;
+  
+  }
+  .slideViewTitle{
+    /* font-size: 2em;
+    padding-top: 2em; */
+  }
+  .slideViewInstructions{
+    width: 15em;
+  /* left: 20vw; */
+
+  }
+  .slideViewInstructionsTitle{
+
+  }
+  .slideViewInstructionsItemWrapper{
+
+  }
+  .slideViewInstructionsItem{
+
+  }
+  .mySliderWrapper{
+    /* height: 1000px; */
+    /* height: 20vh; */
+    padding: 0;
+    margin: 0;
   }
 }
 
