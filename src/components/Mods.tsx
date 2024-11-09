@@ -15,6 +15,18 @@ export default function Mods() {
         setPosition({ x: `${x}%`, y: `${y}%` });
       };
 
+
+      const [visible, setVisible] = useState(false);
+
+      const showNotification = () => {
+        setVisible(true);
+        setTimeout(() => setVisible(false), 3000);
+      };
+      const handleCopy = () => {
+        navigator.clipboard.writeText('mods.videmanmc.ru')
+        showNotification();
+      };
+
     return <div className='animatedBackground slideView mods'
     style={
         {
@@ -29,10 +41,22 @@ export default function Mods() {
         <div className='slideViewInstructions'>
             <div className='slideViewInstructionsTitle'>Инструкции:</div>
             <div className='slideViewInstructionsItemWrapper'>
-                <div className='slideViewInstructionsItem'>Как играть</div>
-                <div className='slideViewInstructionsItem'>Список команд</div>
-                <div className='slideViewInstructionsItem'>Адрес сервера</div>
-            </div>
+              <a href='http://localhost:3000/docs/mods/intro'>
+              <div className='slideViewInstructionsItem'>Как играть</div>
+
+              </a>
+              <div className='slideViewInstructionsItem' onClick={handleCopy}>Адрес сервера</div>
+                <div 
+                onClick={handleCopy}
+                className='slideViewInstructionsItem'>mods.videmanmc.ru</div>
+                {visible && (
+                  <div className="notification">
+                    Текст успешно скопирован в буфер обмена!
+                  </div>
+                )}
+
+              </div>
+                
         </div>
     </div>;
 }

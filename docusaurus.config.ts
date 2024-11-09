@@ -58,6 +58,17 @@ const config: Config = {
           position: 'left',
           label: 'Руководство по OneBlock',
         },
+
+        {
+          to: 'https://store.videmanmc.ru',
+          label: 'Магазин',
+          position: 'right',
+        },
+        {
+          to: 'https://www.youtube.com/@videmanmc',
+          label: 'Ютуб',
+          position: 'right',
+        },
         {
           to: 'https://discord.gg/kQeW23CjNa',
           label: 'Дискорд',

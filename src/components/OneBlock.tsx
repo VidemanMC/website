@@ -15,6 +15,19 @@ export default function OneBlock() {
         const y = ((e.clientY - top) / height - 0.5) * 4;
         setPosition({ x: `${x}%`, y: `${y}%` });
       };
+
+      
+      const [visible, setVisible] = useState(false);
+
+      const showNotification = () => {
+        setVisible(true);
+        setTimeout(() => setVisible(false), 3000);
+      };
+      const handleCopy = () => {
+        navigator.clipboard.writeText('play.videmanmc.ru')
+        showNotification();
+      };
+
     return <div className='animatedBackground slideView oneBlock'
     style={
         {
@@ -29,10 +42,22 @@ export default function OneBlock() {
         <div className='slideViewInstructions'>
             <div className='slideViewInstructionsTitle'>Инструкции:</div>
             <div className='slideViewInstructionsItemWrapper'>
-                <div className='slideViewInstructionsItem'>Как играть</div>
-                <div className='slideViewInstructionsItem'>Список команд</div>
-                <div className='slideViewInstructionsItem'>Адрес сервера</div>
+              <a href='/docs/oneblock/intro'>
+              <div className='slideViewInstructionsItem '>Как играть</div>
+              </a>
+                <div className='slideViewInstructionsItem ' onClick={handleCopy}>Адрес сервера</div>
+                <div className='slideViewInstructionsItem'
+                onClick={handleCopy}
+                >play.videmanmc.ru</div>
+
+
+
             </div>
+            {visible && (
+                  <div className="notification">
+                    Текст успешно скопирован в буфер обмена!
+                  </div>
+                  )}
         </div>
     </div>;
 }

@@ -24,8 +24,8 @@ export default function Team() {
     },
     {
         name: 'Protosso',
-        job: 'Графический дизайнер',
-        words: '',
+        job: 'графический дизайнер',
+        words: 'К облагорожению сайта готов!',
         links: [],
         img: '/img/pages/team/videman-green.jpg',
     },
