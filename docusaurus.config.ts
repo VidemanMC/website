@@ -43,20 +43,19 @@ const config: Config = {
         {
           to: '/',
           label: 'Главная',
-          activeBaseRegex: 'docs/(next|v8)',
-          // target: '_blank',
+          activeBaseRegex: 'docs/(next|v8)'
         },
         {
           type: 'docSidebar',
           sidebarId: 'modSidebar',
           position: 'left',
-          label: 'Руководство по модам',
+          label: 'The Cut Occult',
         },
         {
           type: 'docSidebar',
           sidebarId: 'oneBlockSidebar',
           position: 'left',
-          label: 'Руководство по OneBlock',
+          label: 'OneBlock',
         },
 
         {
