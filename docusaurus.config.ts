@@ -19,7 +19,7 @@ const config: Config = {
   },
 
   scripts: [
-    {src: 'http://videmanmc.ru/scripts/yandex-analitics.js', defer: true, 'data-domain': 'videmanmc.ru'}
+    {src: 'https://videmanmc.ru/scripts/yandex-analitics.js', defer: true, 'data-domain': 'videmanmc.ru'}
   ],
 
   presets: [
