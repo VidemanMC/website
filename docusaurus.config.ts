@@ -18,6 +18,10 @@ const config: Config = {
     locales: ['ru'],
   },
 
+  scripts: [
+    {src: 'http://videmanmc.ru/scripts/yandex-analitics.js', defer: true, 'data-domain': 'videmanmc.ru'}
+  ],
+
   presets: [
     [
       'classic',
