@@ -12,7 +12,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 ## Во-первых
 Вход на сервер доступен строго через мод-пак(лаунчер пока в разработке, так что установка мод-пак). Вот как его установить!
 
-1) Загрузите мод-пак [отсюда](https://drive.google.com/file/d/1t2C4nhW57Zq0Bid3G9dXafmqi0DUcguW/view?usp=drive_link).
+1) Загрузите поледний релиз мод-пака [отсюда](https://github.com/VidemanMC/modpack/releases).
 2) Вы скачали архив.
 
  <PhotoProvider>

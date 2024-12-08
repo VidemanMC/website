@@ -23,6 +23,13 @@ export default function Team() {
         img: '/img/pages/team/Wwelol08.png',
     },
     {
+        name: 'Protosso',
+        job: 'графический дизайнер',
+        words: 'К облагорожению сайта готов!',
+        links: [],
+        img: '/img/pages/team/videman-green.jpg',
+    },
+    {
         name: 'TallFly',
         job: 'переводчик',
         words: 'Отвечаю за перевод модов и плагинов. Если перевода не существует - делаю его самостоятельно (づ ◕‿◕ )づ',

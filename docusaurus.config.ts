@@ -43,20 +43,30 @@ const config: Config = {
         {
           to: '/',
           label: 'Главная',
-          activeBaseRegex: 'docs/(next|v8)',
-          // target: '_blank',
+          activeBaseRegex: 'docs/(next|v8)'
         },
         {
           type: 'docSidebar',
           sidebarId: 'modSidebar',
           position: 'left',
-          label: 'Руководство по модам',
+          label: 'The Cut Occult',
         },
         {
           type: 'docSidebar',
           sidebarId: 'oneBlockSidebar',
           position: 'left',
-          label: 'Руководство по OneBlock',
+          label: 'OneBlock',
+        },
+
+        {
+          to: 'https://store.videmanmc.ru',
+          label: 'Магазин',
+          position: 'right',
+        },
+        {
+          to: 'https://www.youtube.com/@videmanmc',
+          label: 'Ютуб',
+          position: 'right',
         },
         {
           to: 'https://discord.gg/kQeW23CjNa',
