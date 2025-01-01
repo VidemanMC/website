@@ -109,6 +109,9 @@ const config: Config = {
           '/docs/mods/intro': { priority: 0.9, changefreq: 'daily' },
           '/docs/oneblock/intro': { priority: 0.9, changefreq: 'daily' },
         },
+        excludePaths: [
+          '/TestPage',
+        ],
       },
     ],
   ],
