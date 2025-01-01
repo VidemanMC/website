@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -19,7 +19,7 @@ const config: Config = {
   },
 
   scripts: [
-    {src: 'https://videmanmc.ru/scripts/yandex-analitics.js', defer: true, 'data-domain': 'videmanmc.ru'},
+    { src: 'https://videmanmc.ru/scripts/yandex-analitics.js', defer: true, 'data-domain': 'videmanmc.ru' },
   ],
 
   presets: [
@@ -32,22 +32,17 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: false, // Отключение встроенного плагина sitemap
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
     metadata: [
-      {name: 'title', content: 'VidemanMC.ru'},
-      {name: 'keywords', content: 'minecraft, gaming, multiplayer, survival, oneblock, one block, modded, pvp, гейминг, игры, мультиплеер, майнкрафт, выживание, моды, ванблок, ван блок, пвп, онлайн игры'},
-      {name: 'description', content: 'VidemanMC.ru - это сервера для игры с друзьями во множестве увлекательных режимов!'},
+      { name: 'title', content: 'VidemanMC.ru' },
+      { name: 'keywords', content: 'minecraft, gaming, multiplayer, survival, oneblock, one block, modded, pvp, гейминг, игры, мультиплеер, майнкрафт, выживание, моды, ванблок, ван блок, пвп, онлайн игры' },
+      { name: 'description', content: 'VidemanMC.ru - это сервера для игры с друзьями во множестве увлекательных режимов!' },
     ],
-    sitemap: {
-      changefreq: 'weekly', // Частота обновления страниц
-      priority: 0.5,       // Приоритетность страниц
-      ignorePatterns: ['/tags/**', '/TestPage'], // Исключение определённых страниц
-      filename: 'sitemap.xml',     // Название файла Sitemap
-    },
     navbar: {
       items: [
         {
@@ -104,6 +99,22 @@ const config: Config = {
       darkTheme: prismThemes.jettwaveDark,
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    [
+      './static/plugins/custom-sitemap.js',
+      {
+        priorityMap: {
+          '/': { priority: 1.0, changefreq: 'daily' },
+          '/docs/mods/intro': { priority: 0.9, changefreq: 'daily' },
+          '/docs/oneblock/intro': { priority: 0.9, changefreq: 'daily' },
+        },
+        excludePaths: [
+          '/TestPage',
+        ],
+      },
+    ],
+  ],
 };
 
 export default config;
