@@ -19,7 +19,7 @@ const config: Config = {
   },
 
   scripts: [
-    {src: 'https://videmanmc.ru/scripts/yandex-analitics.js', defer: true, 'data-domain': 'videmanmc.ru'}
+    {src: 'https://videmanmc.ru/scripts/yandex-analitics.js', defer: true, 'data-domain': 'videmanmc.ru'},
   ],
 
   presets: [
@@ -35,19 +35,25 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  
+
   themeConfig: {
     metadata: [
       {name: 'title', content: 'VidemanMC.ru'},
       {name: 'keywords', content: 'minecraft, gaming, multiplayer, survival, oneblock, one block, modded, pvp, гейминг, игры, мультиплеер, майнкрафт, выживание, моды, ванблок, ван блок, пвп, онлайн игры'},
       {name: 'description', content: 'VidemanMC.ru - это сервера для игры с друзьями во множестве увлекательных режимов!'},
     ],
+    sitemap: {
+      changefreq: 'weekly', // Частота обновления страниц
+      priority: 0.5,       // Приоритетность страниц
+      ignorePatterns: ['/tags/**', '/TestPage'], // Исключение определённых страниц
+      filename: 'sitemap.xml',     // Название файла Sitemap
+    },
     navbar: {
       items: [
         {
           to: '/',
           label: 'Главная',
-          activeBaseRegex: 'docs/(next|v8)'
+          activeBaseRegex: 'docs/(next|v8)',
         },
         {
           type: 'docSidebar',
@@ -61,7 +67,6 @@ const config: Config = {
           position: 'left',
           label: 'OneBlock',
         },
-
         {
           to: 'https://store.videmanmc.ru',
           label: 'Магазин',
@@ -78,12 +83,12 @@ const config: Config = {
           position: 'right',
         },
         {
-          to: 'https://t.me/+AakeNuqMt6M2NDgy', 
+          to: 'https://t.me/+AakeNuqMt6M2NDgy',
           label: 'Телеграм',
-          position: 'right'
-        }, 
+          position: 'right',
+        },
       ],
-      hideOnScroll:true,
+      hideOnScroll: true,
       logo: {
         alt: 'VidemanLogo',
         src: 'img/icon_transparet_background.png',
@@ -99,8 +104,6 @@ const config: Config = {
       darkTheme: prismThemes.jettwaveDark,
     },
   } satisfies Preset.ThemeConfig,
-
-  
 };
 
 export default config;
