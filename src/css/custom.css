@@ -68,13 +68,16 @@
   margin-top: 10px;
   color: white;
 }
-.mainPageTopComponent{
-  /* background-image: url("/img/pages/mainpage/firstcomponent.png"); */
-  background-image: url("/img/pages/mainpage/gif-background1-slow.gif");
-  background-size:cover;
+.mainPageTopComponent {
+  background-image: none; /* Пока изображение не загружено */
+  background-size: cover;
   height: 1000px;
-
 }
+
+.mainPageTopComponent.loaded {
+  background-image: url("/img/pages/mainpage/gif-background1-slow.gif"); /* После загрузки */
+}
+
 
 .simpleWrapper{
   display: grid;
@@ -158,12 +161,12 @@
   /* animation: slideIn 2s forwards; */
 }
 
-.animatedBackground{
+
+.animatedBackground {
   overflow: hidden;
   position: relative;
   z-index: 10;
   margin-left: -20px;
-  
 }
 
 .animatedBackground::before {
@@ -179,9 +182,9 @@
   background-position: center;
   transform-origin: center;
   transform: translate(calc(var(--x) / 2), calc(var(--y) / 2));
-  transition: transform 0.1s ease;
-  
+  transition: transform 0.1s ease, background-image 0.3s ease-in-out;
 }
+
 
 .mainPageSlider{
   height: 100vh;
@@ -247,17 +250,11 @@
 }
 
 .slideView{
-  /* width: 100%;
-  height: 100%; */
   background-size:cover;
   background-position: center; 
-  /* 
-  background-size: auto; */
   position: relative;
-
   height: 100vh;
   width: 100vw;
-
 }
 
 .slideViewTitle{
@@ -314,30 +311,59 @@
 }
 
 .oneBlock{
+  background-image: none; /* Пока не загружено */
+}
+.oneBlock.loaded {
   background-image: url('/img/pages/mainpage/oneblock.png');
 }
 
 .mods{
-  background-image: url('/img/pages/mainpage/mods.png');
-
+  background-image: none; /* Пока не загружено */
 }
 
+.mods.loaded {
+  background-image: url('/img/pages/mainpage/mods.png'); /* Когда загружено */
+}
 .bosses{
-  background-image: url('/img/pages/mainpage/bosses.png');
-
-
-  /* background-size:cover;
-  background-position: center;  */
-  /* height: 100vh;
-  width: 100vw;
-   */
-  
-
+  background-image: none; /* Пока не загружено */
 }
+
+.bosses.loaded {
+  background-image: url('/img/pages/mainpage/bosses.png');
+}
+
 
 .team{
   background-color: rgb(133, 183, 184);
 }
+.teammatesContainer {
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh; /* Ограничиваем высоту */
+  overflow-y: auto; /* Вертикальная прокрутка */
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+
+  display: block; /* Делаем блоковый элемент */
+  margin: 0 auto; /* Центрируем по горизонтали */
+  padding-bottom: 100px;
+}
+
+
+.teammatesContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.teammatesContainer::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.teammatesContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 
 .teammates{
   display: flex;
@@ -360,12 +386,15 @@
 .teammateCard:hover{
   transform: scale(1.05);
 }
-.teammateImg{
-
+.teammateImgWrapper {
+  width: 100%;
+}
+.teammateImg {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
 .teammateInfo{
   padding: 16px;
 }
@@ -477,12 +506,8 @@
 }
 /* Стили для экранов шире 768px (планшеты и десктопы) */
 @media (max-width: 768px) {
-  .mainPageTopComponent{
+  .mainPageTopComponent {
     background-position: center;
-  }
-  body {
-  }
-  .mainPageTopComponent{
     height: 100vh;
   }
   .simpleWrapper{
@@ -520,7 +545,6 @@
   .slideView{
     height: 120vh;
     width: 100vw;
-  
   }
   .slideViewTitle{
     /* font-size: 2em;
