@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardMedia, Typography, Box, List, ListItem, Button, Fade, Collapse, Grow } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import CloseIcon from '@mui/icons-material/Close';
 
 interface DonationCardProps {
@@ -15,16 +14,19 @@ interface DonationCardProps {
     bestCommands: { name: string; description: string }[];
     features: string[];
   };
+  isExpanded: boolean;
+  toggleExpand: () => void;
 }
 
-export default function DonationCard({ donation }: DonationCardProps) {
+export default function DonationCard({ donation, isExpanded, toggleExpand }: DonationCardProps) {
   const [expanded, setExpanded] = useState(false);
-  const [showAllCommands, setShowAllCommands] = useState(false); // Управляет раскрытием списка команд
+  const [visibleCommands, setVisibleCommands] = useState(4);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const handleToggle = () => {
     setExpanded((prev) => !prev);
-    setShowAllCommands(false); // Скрывать расширенный список при закрытии
+    setVisibleCommands(4);
+    toggleExpand();
   };
 
 
@@ -41,7 +43,7 @@ export default function DonationCard({ donation }: DonationCardProps) {
         backgroundColor: 'transparent',
         // height: expanded ? '400px' : '164px',
         overflow: 'hidden',
-        minHeight: expanded ? 'fit-content' : '164px',
+        minHeight: isExpanded ? 'fit-content' : '164px',
       }}
     >
       {/*  Фиксированный блок с картинками, названием и ценой */}
@@ -56,6 +58,7 @@ export default function DonationCard({ donation }: DonationCardProps) {
           left: 0,
           cursor: 'pointer',
           overflow: 'hidden',
+          userSelect:'none'
         }}
       >
         <CardMedia
@@ -188,8 +191,7 @@ export default function DonationCard({ donation }: DonationCardProps) {
             padding: expanded ? '16px' : '0px',
             transition: 'padding 0.5s ease-in-out',
             boxShadow: expanded ? '0px 4px 10px rgba(0,0,0,0.1)' : 'none',
-            borderRadius: '0px 0px 40px 40px'
-
+            borderRadius: '0px 0px 20px 20px'
           }}
         >
           {/* Лучшие команды */}
@@ -200,92 +202,101 @@ export default function DonationCard({ donation }: DonationCardProps) {
             Лучшие команды:
           </Typography>
           <List sx={{ padding: 0, textAlign: 'center' }}>
-            {donation.bestCommands.slice(0, showAllCommands ? donation.bestCommands.length : 4).map((command, index) => (
-              <Box key={index} sx={{ width: '300px' }}>
-                {/* Название команды*/}
-                <ListItem
-                  onClick={() => handleCommandToggle(index)}
-                  sx={{
-                    padding: '8px 20px',
-                    color: 'black',
-                    
-                    backgroundColor: '#e3e3e3',
-                    borderRadius: '8px',
-                    width: '100%',
-                    alignItems: 'center',
-                    marginTop: '5px',
-                    transition: 'background-color 0.3s',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    '&:hover': { backgroundColor: '#d6d6d6' },
-                  }}
-                >
-                  <Typography variant="body2" sx={{ fontWeight: '400', fontSize: '18px',}}>{command.name}</Typography>
-                  <ExpandMoreIcon
+            {donation.bestCommands.map((command, index) => (
+              <Collapse key={index} in={index < visibleCommands} timeout={400}>
+                <Box key={index} sx={{ width: '300px' }}>
+                  {/* Название команды*/}
+                  <ListItem
+                    onClick={() => handleCommandToggle(index)}
                     sx={{
-                      transform: expandedIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
-                      transition: 'transform 0.3s ease-in-out',
-                      color: '#848484',
-                      height:'27px', width:'48px',position:'absolute', right:'0px'
-                    }}
-                  />
-                </ListItem>
-
-                {/* Описание команды */}
-                <Collapse in={expandedIndex === index} timeout={300}>
-                  <Box
-                    sx={{
-                      overflow: 'hidden',
-                      backgroundColor: '#A5A5A5',
+                      padding: '8px 20px',
+                      color: 'black',
+                      backgroundColor: '#e3e3e3',
                       borderRadius: '8px',
-                      marginTop:  '4px' ,
+                      width: '100%',
+                      alignItems: 'center',
+                      marginTop: '5px',
+                      transition: 'background-color 0.3s',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      '&:hover': { backgroundColor: '#d6d6d6' },
                     }}
                   >
-                    <Typography
-                      variant="body2"
+                    <Typography variant="body2" sx={{ fontWeight: '400', fontSize: '18px',}}>{command.name}</Typography>
+                    <ExpandMoreIcon
                       sx={{
-                        fontSize: '16px',
-                        fontWeight: '400',
-                        textAlign: 'left',
-                        padding: '8px 10px',
+                        transform: expandedIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                        transition: 'transform 0.3s ease-in-out',
+                        color: '#848484',
+                        height:'27px', width:'48px',position:'absolute', right:'0px'
+                      }}
+                    />
+                  </ListItem>
+
+                  {/* Описание команды */}
+                  <Collapse in={expandedIndex === index} timeout={300}>
+                    <Box
+                      sx={{
+                        overflow: 'hidden',
+                        backgroundColor: '#A5A5A5',
+                        borderRadius: '8px',
+                        marginTop:  '4px' ,
                       }}
                     >
-                      {command.description}
-                    </Typography>
-                  </Box>
-                </Collapse>
-              </Box>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontSize: '16px',
+                          fontWeight: '400',
+                          textAlign: 'left',
+                          padding: '8px 10px',
+                        }}
+                      >
+                        {command.description}
+                      </Typography>
+                    </Box>
+                  </Collapse>
+                </Box>
+              </Collapse>
             ))}
           </List>
 
           {/* Кнопка 'Показать больше' */}
-          <Fade in={!showAllCommands} timeout={300}>
-            <Button
-              size="small"
-              sx={{
-                padding: '8px 20px',
-                color: 'black',
-                backgroundColor: '#e3e3e3',
-                borderRadius: '8px',
-                width: '300px',
-                alignItems: 'center',
-                marginTop: '5px',
-                transition: 'background-color 0.3s',
-                cursor: 'pointer',
-                display: 'flex',
-                justifyContent: 'center',
-                '&:hover': { backgroundColor: '#d6d6d6' },
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowAllCommands(true);
-              }}
-            >
-              Показать больше команд
-            </Button>
-          </Fade>
-
+            <Collapse in={visibleCommands < donation.bestCommands.length} timeout={300}>
+              <Button
+                size="small"
+                sx={{
+                  padding: '8px 20px',
+                  color: 'black',
+                  backgroundColor: '#e3e3e3',
+                  borderRadius: '8px',
+                  width: '300px',
+                  alignItems: 'center',
+                  marginTop: '5px',
+                  transition: 'background-color 0.3s',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  '&:hover': { backgroundColor: '#d6d6d6' },
+                  textTransform: 'none', fontWeight: '400', fontSize: '18px',
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setVisibleCommands((prev) => prev + 3);
+                }}
+              >
+                Показать больше команд
+                <ExpandMoreIcon
+                      sx={{
+                        transform: visibleCommands >= donation.bestCommands.length ? 'rotate(180deg)' : 'rotate(0deg)',
+                        transition: 'transform 0.3s ease-in-out',
+                        color: '#848484',
+                        height:'27px', width:'48px',position:'absolute', right:'0px'
+                      }}
+                    />
+              </Button>
+            </Collapse>
           {/* Особенности */}
           <Typography
             variant="subtitle1"

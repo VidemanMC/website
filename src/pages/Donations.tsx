@@ -6,7 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import store from '../store/store';
 import DonationCard from '../components/DonationCard';
 
-const donations = [
+const oneBlockDonations = [
     { 
       id: 1, 
       title: 'ПРЕЗИДЕНТ', 
@@ -56,7 +56,7 @@ const donations = [
     }
   ];
   
-  const otherDonations = [
+  const moddedDonations = [
     { 
       id: 1, 
       title: 'ПРЕЗИДЕНТ', 
@@ -127,10 +127,17 @@ const toggleButtonStyles = {
 export default function Donations(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   const [mode, setMode] = useState('OneBlock');
-  const filteredDonations = mode === 'OneBlock' ? donations : otherDonations;
+  const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({});
+  const filteredDonations = mode === 'OneBlock' ? oneBlockDonations : moddedDonations;
+
 
   const handleModeChange = (event: React.MouseEvent<HTMLElement>, newMode: string | null) => {
     if (newMode !== null) {
+      Object.keys(expandedCards).forEach((id) => {
+        if (expandedCards[Number(id)]) {
+          setExpandedCards((prev) => ({ ...prev, [Number(id)]: false }));
+        }
+      });
       setMode(newMode);
     }
   };
@@ -138,15 +145,11 @@ export default function Donations(): JSX.Element {
   return (
     <Provider store={store}>
       <Layout title={`${siteConfig.title} - Донаты`}>
-        <Container maxWidth={false} sx={{ padding: '20px', maxWidth: '100%', }}>
-          <Typography variant="h4" gutterBottom sx={{textAlign:'center', fontWeight:'medium'}}>
+        <Container maxWidth={false} sx={{ padding: '20px', maxWidth: '100%' }}>
+          <Typography variant="h4" gutterBottom sx={{ textAlign: 'center', fontWeight: 'medium' }}>
             Не будь роблоксером. Будь майнкрафтером.
           </Typography>
-          <Typography variant="h4" gutterBottom sx={{textAlign:'center', fontWeight:'medium'}}>
-            Греча — полезно!
-          </Typography>
           
-          {/* Переключатель режимов */}
           <Box display="flex" justifyContent="center" mb={3}>
             <ToggleButtonGroup
               value={mode}
@@ -161,20 +164,24 @@ export default function Donations(): JSX.Element {
                 border: '0px',
               }}
             >
-                <ToggleButton value="OneBlock" aria-label="OneBlock" sx={toggleButtonStyles}>
-                  OneBlock
-                </ToggleButton>
+              <ToggleButton value="OneBlock" aria-label="OneBlock" sx={toggleButtonStyles}>
+                OneBlock
+              </ToggleButton>
 
-                <ToggleButton value="Modded" aria-label="Modded" sx={toggleButtonStyles}>
-                  Modded
-                </ToggleButton>
-
+              <ToggleButton value="Modded" aria-label="Modded" sx={toggleButtonStyles}>
+                Modded
+              </ToggleButton>
             </ToggleButtonGroup>
           </Box>
 
-          <Box display="flex" flexWrap="wrap" gap={3} justifyContent="center" sx={{padding:2,}}>
+          <Box display="flex" flexWrap="wrap" gap={3} justifyContent="center" sx={{ padding: 2 }}>
             {filteredDonations.map((donation) => (
-              <DonationCard key={donation.id} donation={donation} />
+              <DonationCard
+                key={`${mode}-${donation.id}`}
+                donation={donation}
+                isExpanded={expandedCards[donation.id] || false}
+                toggleExpand={() => setExpandedCards((prev) => ({ ...prev, [donation.id]: !prev[donation.id] }))}
+              />
             ))}
           </Box>
         </Container>
