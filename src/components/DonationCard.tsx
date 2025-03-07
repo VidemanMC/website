@@ -39,10 +39,9 @@ export default function DonationCard({ donation }: DonationCardProps) {
         borderRadius: '20px',
         position: 'relative',
         backgroundColor: 'transparent',
-        // transition: 'height 0.3s ease-in-out',
-        height: expanded ? '400px' : '164px',
+        // height: expanded ? '400px' : '164px',
         overflow: 'hidden',
-        minHeight: expanded ? '660px' : '0px',
+        minHeight: expanded ? 'fit-content' : '164px',
       }}
     >
       {/*  Фиксированный блок с картинками, названием и ценой */}
@@ -179,19 +178,21 @@ export default function DonationCard({ donation }: DonationCardProps) {
         <Box
           sx={{
             position: 'relative',
-            marginTop: '160px',
+            marginTop: '164px',
             width: '100%',
             backgroundColor: '#a6a6a6',
             overflow: 'hidden',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            padding: expanded ? '16px' : '0px', // Анимация отступов
-            transition: 'padding 0.5s ease-in-out', // Плавность отступов
+            padding: expanded ? '16px' : '0px',
+            transition: 'padding 0.5s ease-in-out',
             boxShadow: expanded ? '0px 4px 10px rgba(0,0,0,0.1)' : 'none',
+            borderRadius: '0px 0px 40px 40px'
+
           }}
         >
-          {/* 🔹 Лучшие команды */}
+          {/* Лучшие команды */}
           <Typography
             variant="subtitle1"
             sx={{ fontWeight: 'bold', fontSize: '24px', color: 'black', marginTop: '8px', textAlign: 'left', width: '300px' }}
