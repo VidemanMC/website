@@ -199,8 +199,8 @@ export default function Donations(): JSX.Element {
               <DonationCard
                 key={`${mode}-${donation.id}`}
                 donation={donation}
-                isExpanded={expandedCards[donation.id] || false}
-                toggleExpand={() => setExpandedCards((prev) => ({ ...prev, [donation.id]: !prev[donation.id] }))}
+                // isExpanded={expandedCards[donation.id] || false}
+                // toggleExpand={() => setExpandedCards((prev) => ({ ...prev, [donation.id]: !prev[donation.id] }))}
               />
             ))}
           </Box>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardMedia, Typography, Box, List, ListItem, Button, Fade, Collapse, Grow } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography, Box, List, ListItem, Button, Fade, Collapse, Modal, Backdrop, Grow } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -14,53 +14,35 @@ interface DonationCardProps {
     bestCommands: { name: string; description: string }[];
     features: string[];
   };
-  isExpanded: boolean;
-  toggleExpand: () => void;
 }
 
-export default function DonationCard({ donation, isExpanded, toggleExpand }: DonationCardProps) {
-  const [expanded, setExpanded] = useState(false);
+export default function DonationCard({ donation }: DonationCardProps) {
+  const [open, setOpen] = useState(false);
   const [visibleCommands, setVisibleCommands] = useState(4);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
-  const handleToggle = () => {
-    setExpanded((prev) => !prev);
-    setVisibleCommands(4);
-    toggleExpand();
-  };
-
 
   const handleCommandToggle = (index: number) => {
     setExpandedIndex((prev) => (prev === index ? null : index));
   };
 
   return (
-    <Card
-      sx={{
-        width: '360px',
-        borderRadius: '20px',
-        position: 'relative',
-        backgroundColor: 'transparent',
-        // height: expanded ? '400px' : '164px',
-        overflow: 'hidden',
-        minHeight: isExpanded ? 'fit-content' : '164px',
-      }}
-    >
-      {/*  Фиксированный блок с картинками, названием и ценой */}
-      <Box
-      onClick={handleToggle}
-
+    <>
+      {/* Карточка в списке */}
+      <Card
+        onClick={() => setOpen(true)}
         sx={{
-          width: '100%',
-          height: '164px',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          cursor: 'pointer',
+          width: '360px',
+          borderRadius: '20px',
+          position: 'relative',
+          backgroundColor: 'transparent',
           overflow: 'hidden',
-          userSelect:'none'
+          minHeight: '164px',
+          cursor: 'pointer',
+          transition: 'transform 0.2s ease-in-out',
+          '&:hover': { transform: 'scale(1.05)' },
         }}
       >
+        {/* Фон карточки */}
         <CardMedia
           component="img"
           image={donation.image}
@@ -75,7 +57,8 @@ export default function DonationCard({ donation, isExpanded, toggleExpand }: Don
             filter: 'brightness(0.7)',
           }}
         />
-      <Box
+        {/* Персонаж на карточке */}
+        <Box
           sx={{
             width: '100%',
             height: '100%',
@@ -96,7 +79,7 @@ export default function DonationCard({ donation, isExpanded, toggleExpand }: Don
               width: 'auto',
               height: '100%',
               objectFit: 'contain',
-              overflow:'hidden',
+              overflow: 'hidden',
               position: 'absolute',
               top: '60px',
               left: '50%',
@@ -105,30 +88,7 @@ export default function DonationCard({ donation, isExpanded, toggleExpand }: Don
           />
         </Box>
 
-      {/* Кнопка закрытия с анимацией исчезновения */}
-      
-      <Fade in={expanded} timeout={300}>
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '12px',
-            right: '12px',
-            width: '42px',
-            height: '42px',
-            backgroundColor: 'white',
-            borderRadius: '50%',
-            transition: 'background-color 0.3s',
-            cursor: 'pointer',
-            '&:hover': { backgroundColor: '#d6d6d6' },
-          }}
-          onClick={(e) => {
-            e.stopPropagation();
-            setExpanded(false);
-          }}
-        >
-          <CloseIcon sx={{ width: '32px', height: '32px', position: 'absolute', top: '5px', right: '5px', color: '#545454' }} />
-        </Box>
-      </Fade>
+        {/* Название и цена */}
         <CardContent
           sx={{
             position: 'absolute',
@@ -145,17 +105,9 @@ export default function DonationCard({ donation, isExpanded, toggleExpand }: Don
             width: '100%',
           }}
         >
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: '800',
-              fontSize: '40px',
-              lineHeight: '1',
-            }}
-          >
+          <Typography variant="h6" sx={{ fontWeight: '800', fontSize: '40px', lineHeight: '1' }}>
             {donation.title}
           </Typography>
-
           <Typography
             variant="h6"
             sx={{
@@ -171,30 +123,162 @@ export default function DonationCard({ donation, isExpanded, toggleExpand }: Don
           >
             {donation.price}
           </Typography>
-
         </CardContent>
-      </Box>
+      </Card>
 
-      {/* Раздвигающаяся вниз область с информацией */}
-      <Collapse in={expanded} timeout={500} unmountOnExit>
-        
-        <Box
-          sx={{
-            position: 'relative',
-            marginTop: '164px',
-            width: '100%',
-            backgroundColor: '#a6a6a6',
-            overflow: 'hidden',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            padding: expanded ? '16px' : '0px',
-            transition: 'padding 0.5s ease-in-out',
-            boxShadow: expanded ? '0px 4px 10px rgba(0,0,0,0.1)' : 'none',
-            borderRadius: '0px 0px 20px 20px'
-          }}
-        >
-          {/* Лучшие команды */}
+      {/* Модальное окно */}
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        closeAfterTransition
+        // BackdropComponent={Backdrop}
+        // BackdropProps={{ timeout: 500 }}
+      >
+        <Fade in={open}>
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: '360px',
+              bgcolor: 'background.paper',
+              boxShadow: 24,
+              borderRadius: '20px',
+              overflow: 'hidden',
+              outline: 'none',
+            }}
+          >
+            
+            <Card
+              onClick={() => setOpen(true)}
+              sx={{
+                width: '360px',
+              borderRadius: '20px 20px 0px 0px',
+
+                position: 'relative',
+                backgroundColor: 'transparent',
+                overflow: 'hidden',
+                minHeight: '164px',
+                cursor: 'pointer',
+                transition: 'transform 0.2s ease-in-out',
+                '&:hover': { transform: 'scale(1.05)' },
+              }}
+            >
+              {/* Фон карточки */}
+              <CardMedia
+                component="img"
+                image={donation.image}
+                alt={donation.title}
+                sx={{
+                  width: '100%',
+                  height: '164px',
+                  objectFit: 'cover',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  filter: 'brightness(0.7)',
+                }}
+              />
+              {/* Персонаж на карточке */}
+              <Box
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'flex-end',
+                  overflow: 'hidden',
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  image={donation.imageMan}
+                  alt={donation.title}
+                  sx={{
+                    width: 'auto',
+                    height: '100%',
+                    objectFit: 'contain',
+                    overflow: 'hidden',
+                    position: 'absolute',
+                    top: '60px',
+                    left: '50%',
+                    transform: 'translateX(-50%) scale(1.8)',
+                  }}
+                />
+              </Box>
+
+              <Box
+                  sx={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '12px',
+                    width: '42px',
+                    height: '42px',
+                    backgroundColor: 'white',
+                    borderRadius: '50%',
+                    transition: 'background-color 0.3s',
+                    cursor: 'pointer',
+                    '&:hover': { backgroundColor: '#d6d6d6' },
+                  }}
+                    onClick={() => setOpen(false)}
+
+                  
+                >
+                  <CloseIcon sx={{ width: '32px', height: '32px', position: 'absolute', top: '5px', right: '5px', color: '#545454' }} />
+                </Box>
+
+              {/* Название и цена */}
+              <CardContent
+                sx={{
+                  position: 'absolute',
+                  top: '56%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  textAlign: 'center',
+                  color: 'white',
+                  zIndex: 2,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: 0.6,
+                  width: '100%',
+                }}
+              >
+                
+                <Typography variant="h6" sx={{ fontWeight: '800', fontSize: '40px', lineHeight: '1' }}>
+                  {donation.title}
+                </Typography>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    backgroundColor: 'white',
+                    color: 'black',
+                    padding: '0px 15px',
+                    fontSize: '16px',
+                    borderRadius: '40px',
+                    fontWeight: 'normal',
+                    textAlign: 'center',
+                    marginTop: '-3px',
+                  }}
+                >
+                  {donation.price}
+                </Typography>
+              </CardContent>
+            </Card>
+            
+
+
+            <CardContent sx={{ 
+              padding: '16px 16px 30px 30px', backgroundColor:'#a6a6a6',
+              
+              }}>
+              
+
+              {/* Лучшие команды */}
           <Typography
             variant="subtitle1"
             sx={{ fontWeight: 'bold', fontSize: '24px', color: 'black', marginTop: '8px', textAlign: 'left', width: '300px' }}
@@ -297,50 +381,56 @@ export default function DonationCard({ donation, isExpanded, toggleExpand }: Don
                     />
               </Button>
             </Collapse>
-          {/* Особенности */}
-          <Typography
-            variant="subtitle1"
-            sx={{
-              fontWeight: 'bold',
-              fontSize: '24px',
-              color: 'black',
-              marginTop: '8px',
-              textAlign: 'left',
-              width: '300px',
-            }}
-          >
-            А также:
-          </Typography>
-
-          <List sx={{ padding: 0, textAlign: 'center', color: 'black', margin: '5px' }}>
-            {donation.features.map((feature, index) => (
-              <ListItem
-                key={index}
+              {/* Особенности */}
+              <Typography
+                variant="subtitle1"
                 sx={{
-                  padding: '8px 20px',
+                  fontWeight: 'bold',
+                  fontSize: '24px',
                   color: 'black',
-                  fontSize: '14px',
-                  backgroundColor: '#e3e3e3',
-                  borderRadius: '8px',
+                  marginTop: '20px',
+                  marginLeft: '4px',
+                  textAlign: 'left',
                   width: '300px',
-                  alignItems: 'flex-start',
-                  marginBottom: '5px',
-                  marginTop: '5px',
-                  transition: 'background-color 0.3s',
-                  '&:hover': {
-                    backgroundColor: '#d6d6d6',
-                  },
                 }}
               >
-                <Typography variant="body2" sx={{ display: 'block', textAlign: 'left', width: '100%' }}>
-                  {feature}
-                </Typography>
-              </ListItem>
-            ))}
-          </List>
+                А также:
+              </Typography>
+    
+              <List sx={{ padding: 0, textAlign: 'center', color: 'black', margin: '5px' }}>
+                {donation.features.map((feature, index) => (
+                  <ListItem
+                    key={index}
+                    sx={{
+                      padding: '8px 20px',
+                      color: 'black',
+                      fontSize: '14px',
+                      backgroundColor: '#e3e3e3',
+                      borderRadius: '8px',
+                      width: '300px',
+                      alignItems: 'flex-start',
+                      marginBottom: '5px',
+                      marginTop: '5px',
+                      transition: 'background-color 0.3s',
+                      '&:hover': {
+                        backgroundColor: '#d6d6d6',
+                      },
+                    }}
+                  >
+                    <Typography variant="body2" sx={{ display: 'block', textAlign: 'left', width: '100%',
 
-        </Box>
-      </Collapse>
-    </Card>
+fontSize: '16px', padding: '4px',
+
+                     }}>
+                      {feature}
+                    </Typography>
+                  </ListItem>
+                ))}
+              </List>
+            </CardContent>
+          </Box>
+        </Fade>
+      </Modal>
+    </>
   );
 }
