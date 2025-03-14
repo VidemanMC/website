@@ -51,7 +51,7 @@ const config: Config = {
           activeBaseRegex: 'docs/(next|v8)',
         },
         {
-          to: '/Donations',
+          to: '/donations',
           label: 'Донаты',
           position: 'right',
           activeBaseRegex: 'docs/(next|v8)',

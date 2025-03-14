@@ -98,7 +98,9 @@ const moddedDonations = [
 const toggleButtonStyles = {
     backgroundColor: 'transparent',
     color: '#000',
-    fontWeight: 'bold',
+    fontWeight: '400',
+    fontSize:'18px',
+    textTransform:'none',
     flex: 1,
     border:'0',
     width:'130px',

@@ -39,7 +39,7 @@ export default function DonationCardOpened({ donation, closeModal }: DonationCar
         borderRadius: '20px',
         position: 'relative',
         backgroundColor: 'transparent',
-        height: 'fit-content' ,
+        // height: 'fit-content' ,
         overflow: 'hidden',
       }}
     >
