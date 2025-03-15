@@ -46,6 +46,31 @@ export const oneBlockDonations = [
       ],
       features: ['Все преимущества Мецената', 'ПОЛНЫЙ доступ к World Edit', 'Новые сообщения о смерти']
     },
+    { 
+      id: 4, 
+      title: 'Сообщение входа/выхода', 
+      description: 'Заходи и выходи красиво!', 
+      image: '/img/donations/back3.png', 
+      imageMan: '/img/donations/man0.png', 
+      price: '500₽/навсегда',
+      bestCommands: [
+        { name: '/bm editmsg join {player} {что-то крутое}', description: 'Пример: /bm editmsg join {player} сел в ламбу и приехал' },
+        { name: '/bm editmsg quit {player} {что-то крутое}', description: 'Пример: /bm editmsg join {player} сел в ламбу и уехал' },
+      ],
+      features: ['Заходи и выходи красиво!']
+    },
+    { 
+      id: 5, 
+      title: 'FLY', 
+      description: 'Полёт на летающем острове.', 
+      image: '/img/donations/back3.png', 
+      imageMan: '/img/donations/man0.png', 
+      price: '100₽/мес; 300₽/навсегда',
+      bestCommands: [
+        { name: '/is fly ', description: 'Полёт на острове' },
+      ],
+      features: ['Команда позволяет летать в пределах острова']
+    },
     
   ];
   

@@ -114,6 +114,7 @@ export default function DonationCardOpened({ donation, closeModal }: DonationCar
             backgroundColor: 'white',
             borderRadius: '50%',
             transition: 'background-color 0.3s',
+            zIndex:'10',
             cursor: 'pointer',
             '&:hover': { backgroundColor: '#d6d6d6' },
           }}
