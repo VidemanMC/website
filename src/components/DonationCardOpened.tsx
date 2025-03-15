@@ -19,7 +19,7 @@ interface DonationCardOpenedProps {
 
 export default function DonationCardOpened({ donation, closeModal }: DonationCardOpenedProps) {
   // const [expanded, setExpanded] = useState(false);
-  const [visibleCommands, setVisibleCommands] = useState(4);
+  // const [visibleCommands, setVisibleCommands] = useState(4);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   // const handleToggle = () => {
@@ -199,7 +199,7 @@ export default function DonationCardOpened({ donation, closeModal }: DonationCar
         </Typography>
         <List sx={{ padding: 0, textAlign: 'center' }}>
           {donation.bestCommands.map((command, index) => (
-            <Collapse key={index} in={index < visibleCommands} timeout={400}>
+            <Collapse key={index} in={index < donation.bestCommands.length} timeout={400}>
               <Box key={index} sx={{ width: '300px' }}>
                 {/* Название команды*/}
                 <ListItem
@@ -260,7 +260,7 @@ export default function DonationCardOpened({ donation, closeModal }: DonationCar
         </List>
 
         {/* Кнопка 'Показать больше' */}
-          <Collapse in={visibleCommands < donation.bestCommands.length} timeout={300}>
+          {/* <Collapse in={visibleCommands < donation.bestCommands.length} timeout={300}>
             <Button
               size="small"
               sx={{
@@ -293,7 +293,9 @@ export default function DonationCardOpened({ donation, closeModal }: DonationCar
                     }}
                   />
             </Button>
-          </Collapse>
+          </Collapse> */}
+
+
         {/* Особенности */}
         <Typography
           variant="subtitle1"
