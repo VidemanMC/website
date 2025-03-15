@@ -54,8 +54,8 @@ export const oneBlockDonations = [
       imageMan: '/img/donations/man0.png', 
       price: '500₽/навсегда',
       bestCommands: [
-        { name: '/bm editmsg join {player} {что-то крутое}', description: 'Пример: /bm editmsg join {player} сел в ламбу и приехал' },
-        { name: '/bm editmsg quit {player} {что-то крутое}', description: 'Пример: /bm editmsg join {player} сел в ламбу и уехал' },
+        { name: '/bm editmsg join {player} {что-то крутое}', description: 'Пример: /bm editmsg join {player} сел в ламбу и приехал \n Описание: команда позволяет настроить сообщение, которое будет выведено в чат при входе в игру вместо обычного "{player} присоединился к игре".' },
+        { name: '/bm editmsg quit {player} {что-то крутое}', description: 'Пример: /bm editmsg join {player} сел в ламбу и уехал \n Описание: команда позволяет настроить сообщение, которое будет выведено в чат при выходе из игры вместо обычного "{player} вышел из игры".' },
       ],
       features: ['Заходи и выходи красиво!']
     },

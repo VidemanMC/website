@@ -247,6 +247,7 @@ export default function DonationCardOpened({ donation, closeModal }: DonationCar
                         fontWeight: '400',
                         textAlign: 'left',
                         padding: '8px 10px',
+                        whiteSpace: 'pre-line',
                       }}
                     >
                       {command.description}
