@@ -51,6 +51,12 @@ const config: Config = {
           activeBaseRegex: 'docs/(next|v8)',
         },
         {
+          to: '/donations',
+          label: 'Донаты',
+          position: 'right',
+          activeBaseRegex: 'docs/(next|v8)',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'modSidebar',
           position: 'left',
