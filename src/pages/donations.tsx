@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 
 import {oneBlockDonations,moddedDonations} from '../store/donations_descriptions'
 
-
 const toggleButtonStyles = {
     backgroundColor: 'transparent',
     color: '#000',
@@ -116,8 +115,6 @@ export default function Donations(): JSX.Element {
               <DonationCard
                 key={`${mode}-${donation.id}`}
                 donation={donation}
-                // isExpanded={expandedCards[donation.id] || false}
-                // toggleExpand={() => setExpandedCards((prev) => ({ ...prev, [donation.id]: !prev[donation.id] }))}
               />
             ))}
           </Box>

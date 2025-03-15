@@ -38,7 +38,6 @@ export default function OneBlock() {
                 } as React.CSSProperties}
                 onMouseMove={handleMouseMove}
             >
-                {/* Фон загружается скрыто, потом меняем state */}
                 <img
                     src="/img/pages/mainpage/oneblock.png"
                     alt="Background"
