@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 
 import {oneBlockDonations,moddedDonations} from '../store/donations_descriptions'
 
+
 const toggleButtonStyles = {
     backgroundColor: 'transparent',
     color: '#000',
