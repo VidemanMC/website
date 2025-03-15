@@ -39,7 +39,7 @@ export default function Team() {
         },
         {
             name: 'daradanci',
-            job: 'аналитик',
+            job: 'фронтенд-разработчик',
             words: 'Лягушка.',
             links: [],
             img: '/img/pages/team/daradanci.png',
