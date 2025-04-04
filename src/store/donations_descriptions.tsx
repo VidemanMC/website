@@ -27,6 +27,12 @@ export const oneBlockDonations = [
         { name: '/chunk', description: 'Размещение прогрузчика чанков' },
         { name: '/itemlore', description: 'Изменить описание предмета' },
         { name: '/itemname', description: 'Изменить название предмета' },
+        { name: '/repair', description: 'Починить предмет' },
+        { name: '/disg', description: 'Превратиться в моба' },
+        { name: '/undisg', description: 'Стать игроком' },
+        { name: '/entitysize <число>', description: 'Установить себе размер' },
+        { name: '/entitysize reset', description: 'Сбросить свой размер' },
+        { name: '/displayeditor', description: 'Редактирование макетов для декора' },
       ],
       features: ['Сохранение инвентаря', '11 домов', '60 слотов на аукционе', 'Доступно 10 работ!', 'Цена блока в резиденции: 40 копеек', 'Новые сообщения о смерти',  '+ возможности FLY', '+ возможности Спонсора' ]
     },
