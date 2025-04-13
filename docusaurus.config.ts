@@ -39,17 +39,12 @@ const config: Config = {
 
   themeConfig: {
     metadata: [
-      { name: 'title', content: 'VidemanMC.ru' },
-      { name: 'keywords', content: 'minecraft, gaming, multiplayer, survival, oneblock, one block, modded, pvp, гейминг, игры, мультиплеер, майнкрафт, выживание, моды, ванблок, ван блок, пвп, онлайн игры' },
-      { name: 'description', content: 'VidemanMC.ru - это сервера для игры с друзьями во множестве увлекательных режимов!' },
+      { name: 'title', content: 'VidemanMC' },
+      { name: 'keywords', content: 'minecraft, multiplayer, survival, oneblock, mods, pvp, майнкрафт, выживание, моды, ванблок, пвп' },
+      { name: 'description', content: 'сервера для игры с друзьями во множестве увлекательных режимов!' },
     ],
     navbar: {
       items: [
-        {
-          to: '/',
-          label: 'Главная',
-          activeBaseRegex: 'docs/(next|v8)',
-        },
         {
           to: '/donations',
           label: 'Донаты',
@@ -76,11 +71,6 @@ const config: Config = {
         {
           to: 'https://www.youtube.com/@videmanmc',
           label: 'Ютуб',
-          position: 'right',
-        },
-        {
-          to: 'https://discord.gg/kQeW23CjNa',
-          label: 'Дискорд',
           position: 'right',
         },
         {
