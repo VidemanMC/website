@@ -96,6 +96,10 @@ const config: Config = {
               label: 'Ютуб',
               to: 'https://www.youtube.com/@videmanmc',
             },
+            {
+              label: 'Рутуб',
+              to: 'https://rutube.ru/channel/65583935',
+            },
           ],
         },
         {
