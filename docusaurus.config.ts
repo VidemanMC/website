@@ -113,6 +113,10 @@ const config: Config = {
               label: 'Льготы строителям',
               to: '/builder-benefits',
             },
+            {
+              label: 'Мониторинги',
+              to: '/ratings',
+            },
           ],
         },
       ],
