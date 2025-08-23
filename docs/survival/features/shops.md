@@ -5,6 +5,8 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 Игроки на сервере могут продавать через аукцион, но аукцион ограничен по вместительности и времени действия лота. Решение — арендуемые магазины!
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RImYPRR6_Lo?si=L2RKdWogU6FQKpJW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Расположение
 Магазины находятся в домиках на спавне
  <PhotoProvider>
