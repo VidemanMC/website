@@ -43,15 +43,15 @@ const config: Config = {
 
   themeConfig: {
     metadata: [
-      { name: "title", content: "VidemanMC" },
+      { name: "title", content: "VidemanMC — сервер майнкрафт" },
       {
         name: "keywords",
-        content: "майнкрафт, выживание, моды, ванила, взрослые игроки",
+        content: "выживание, тумка, бомж, город, русские",
       },
       {
         name: "description",
         content:
-          "сервера для игры с друзьями во множестве увлекательных режимов!",
+          "Лучший сервер майнкрафт для выживания с друзьями!",
       },
     ],
     navbar: {
@@ -83,7 +83,7 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      copyright: `Copyright © ${new Date().getFullYear()} VidemanMC`,
+      copyright: `Copyright © ${new Date().getFullYear()} VidemanMC. We are not affiliated with Mojang AB or Microsoft.`,
       links: [
         {
           title: 'Соц. сети',
