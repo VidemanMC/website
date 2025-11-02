@@ -11,70 +11,17 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 ## Во-первых
 ### Установка лаунчера
-Вход на сервер доступен строго через мод-пак(лаунчер пока в разработке, так что установка мод-пак). Вот как его установить!
-
-1) Загрузите поледний релиз мод-пака [отсюда](https://github.com/VidemanMC/modpack/releases).
-2) Вы скачали архив.
-
- <PhotoProvider>
-      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_1.png">
-        ![Архив в папке загрузок](/img/tutorial_launcher/tutorial_launcher_1.png)
-      </PhotoView>
-  </PhotoProvider>
-
-3) Извлеките его в любую удобную директорию.
-
- <PhotoProvider>
-      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_2.png">
-        ![Процесс извлечения](/img/tutorial_launcher/tutorial_launcher_2.png)
-      </PhotoView>
-  </PhotoProvider>
-
-4) Вы получили папку с файлами клиента! Откройте её.
-
- <PhotoProvider>
-      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_3.png">
-        ![Папка с файлами клиента](/img/tutorial_launcher/tutorial_launcher_3.png)
-      </PhotoView>
-  </PhotoProvider>
-
-5) Теперь нужно открыть рядом директорию __.minecraft__, в которой хранятся все файлы игры! Если Вы играете через TLauncher, просто нажмите на кнопку в нижней части интерфейса, и Вы перейдёте в нужную директорию.
-
- <PhotoProvider>
-      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_4.png">
-        ![Открываем папку .minecraft](/img/tutorial_launcher/tutorial_launcher_4.png)
-      </PhotoView>
-  </PhotoProvider>
-
-6) Перенесите всё содержимое из папки клиента в директорию __.minecraft__!
-
- <PhotoProvider>
-      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_5.png">
-        ![Перенос содержимого](/img/tutorial_launcher/tutorial_launcher_5.png)
-      </PhotoView>
-  </PhotoProvider>
-
-7) В списке версий Tlaucner'а выбираете версию __Forge 1.20.1__.
-
- <PhotoProvider>
-      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_6.png">
-        ![Поиск нужной версии](/img/tutorial_launcher/tutorial_launcher_6.png)
-      </PhotoView>
-  </PhotoProvider>
-
-8) Нажмите кнопку "скачать" (если версия ещё не установлена) или кнопку "играть".
-
- <PhotoProvider>
-      <PhotoView src="/img/tutorial_launcher/tutorial_launcher_7.png">
-        ![Запуск!](/img/tutorial_launcher/tutorial_launcher_7.png)
-      </PhotoView>
-  </PhotoProvider>
+1. Скачайте и установите файл [`videmanmc-launcher`](https://github.com/VidemanMC/launcher/releases).
+2. Откройте лаунчер.
+3. Введите ник и нажмите на кнопку «Играть».
+4. Лаунчер скачает сборку и автоматически закроется, это займёт время. Не закрывайте лаунчер вручную.
+5. Запустится майнкрафт.
 
 ### Ручная установка сборки
 Изредка, лаунчер может выдать ошибку при автоматической установке или обновлении клиента.
 
 В таком случае, выполните шаги ниже, чтобы установить сборку вручную:
-1. Скачайте архив `client` [отсюда](https://github.com/VidemanMC/modpack/releases/latest).
+1. Скачайте архив [`client`](https://github.com/VidemanMC/modpack/releases/latest).
 1. Перейдите в [папку вашего пользователя](https://yandex.ru/search/?text=как+перейти+в+папку+пользователя).
 1. Откройте папку `.videmanmc`, затем в `client`.
 2. Распакуйте скачанный архив сюда, заменив существующие файлы.
